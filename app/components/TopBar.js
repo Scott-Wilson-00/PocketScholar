@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
 });
 
-TopBar.PropTypes = {
+TopBar.propTypes = {
   titleText: PropTypes.string,
   isHome: PropTypes.bool,
 };
