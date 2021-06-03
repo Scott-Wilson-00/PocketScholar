@@ -1,28 +1,38 @@
 import React from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import PropTypes from "prop-types";
+import { useNavigation } from "@react-navigation/core";
+import images from "../config/images";
+import screenNames from "../config/screenNames";
 
 function TopBar(props) {
+  const navigation = useNavigation();
+
   if (props.isHome) {
-    image = require("../assets/images/home.png");
+    image = images.home;
+    handleButtonPress = () => navigation.navigate(screenNames.home);
   } else {
-    image = require("../assets/images/back_button.png");
+    image = images.back;
+    handleButtonPress = () => navigation.goBack();
   }
 
   return (
     <View style={styles.topBar}>
       {/* Home Button */}
-      <Pressable onPress={() => alert("Home Pressed")}>
+      <Pressable onPress={handleButtonPress}>
         <Image source={image} style={styles.homeButton} />
       </Pressable>
       {/* Page Title */}
-      <Text style={styles.titleText}>{props.titleText}</Text>
+      <Text
+        adjustsFontSizeToFit={true}
+        style={styles.titleText}
+        numberOfLines={1}
+      >
+        {props.titleText}
+      </Text>
       {/* Menu Button */}
       <Pressable onPress={() => alert("Menu Pressed")}>
-        <Image
-          source={require("../assets/images/menu_button.png")}
-          style={styles.menuButton}
-        />
+        <Image source={images.menu} style={styles.menuButton} />
       </Pressable>
     </View>
   );
@@ -43,10 +53,10 @@ const styles = StyleSheet.create({
     fontSize: 35,
   },
   topBar: {
-    alignItems: "center",
+    alignItems: "flex-end",
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 30,
+    flex: 1,
   },
 });
 
