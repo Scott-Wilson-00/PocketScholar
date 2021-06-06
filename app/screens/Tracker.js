@@ -9,7 +9,8 @@ import screenNames from "../config/screenNames";
 function Tracker(props) {
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
-      <Scholarship field="May 6, 2021" header="Deadline"></Scholarship>
+      <TopBar titleText={screenNames.tracker} />
+      <Scholarship name="Mobile App Dev"></Scholarship>
 
       {/* MAIN CONTENT */}
       {/* Page Header */}
