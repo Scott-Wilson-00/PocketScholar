@@ -4,21 +4,18 @@ import BottomBar from "../components/BottomBar";
 import images from "../config/images";
 import SelectableInfo from "../components/SelectableInfo";
 import TopBar from "../components/TopBar";
-import frequentStyles from "../config/frequentStyles";
 import screenNames from "../config/screenNames";
+import globalStyles from "../config/globalStyles";
 
 function GetStartedScreen(props) {
   return (
-    <ImageBackground
-      style={frequentStyles.background}
-      source={images.background}
-    >
+    <ImageBackground style={globalStyles.background} source={images.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
       <TopBar titleText={screenNames.getStarted} />
       {/* Surrounds the list of pages */}
-      <View style={frequentStyles.scrollContainer}>
-        <ScrollView style={frequentStyles.scrollView}>
+      <View style={globalStyles.scrollContainer}>
+        <ScrollView style={globalStyles.scrollView}>
           <SelectableInfo text="Standing Out" />
           <SelectableInfo text="Common Activities" />
           <SelectableInfo text="Get Involved" />

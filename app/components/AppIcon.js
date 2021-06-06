@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
 
 AppIcon.propTypes = {
   changeScreen: PropTypes.func,
-  image: PropTypes.number,
 };
 
 AppIcon.defaultProps = {

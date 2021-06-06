@@ -3,19 +3,16 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import AppIcon from "../components/AppIcon";
 import BottomBar from "../components/BottomBar";
 import TopBar from "../components/TopBar";
-import frequentStyles from "../config/frequentStyles";
+import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
 
 function HomeScreen(props) {
   return (
-    <ImageBackground
-      source={images.background}
-      style={frequentStyles.background}
-    >
+    <ImageBackground source={images.background} style={globalStyles.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
-      <TopBar titleText="PocketScholar" isHome={true} />
+      <TopBar titleText={screenNames.home} isHome={true} />
       {/* "Apps" */}
       <View style={styles.appContainer}>
         {/* Row 1 */}
@@ -32,7 +29,7 @@ function HomeScreen(props) {
         </View>
         {/* Row 2 */}
         <View style={styles.appRow}>
-          <AppIcon image={images.tracker} />
+          <AppIcon image={images.tracker} screenName={screenNames.tracker} />
           <AppIcon image={images.activity} />
           <AppIcon image={images.common} />
         </View>

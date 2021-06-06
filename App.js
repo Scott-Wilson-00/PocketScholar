@@ -2,10 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import screenNames from "./app/config/screenNames";
 import HomeScreen from "./app/screens/HomeScreen";
 import AboutScreen from "./app/screens/AboutScreen";
 import GetStartedScreen from "./app/screens/GetStartedScreen";
-import screenNames from "./app/config/screenNames";
+import ChallengesScreen from "./app/screens/ChallengesScreen";
+import Tracker from "./app/screens/Tracker";
 
 const Stack = createStackNavigator();
 
@@ -25,8 +27,9 @@ export default function App() {
         />
         <Stack.Screen
           name={screenNames.challenges}
-          component={GetStartedScreen}
+          component={ChallengesScreen}
         />
+        <Stack.Screen name={screenNames.tracker} component={Tracker} />
       </Stack.Navigator>
     </NavigationContainer>
   );
