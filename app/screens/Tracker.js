@@ -10,7 +10,7 @@ function Tracker(props) {
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
       <TopBar titleText={screenNames.tracker} />
-      <Scholarship name="Mobile App Dev"></Scholarship>
+      <Scholarship />
 
       {/* MAIN CONTENT */}
       {/* Page Header */}

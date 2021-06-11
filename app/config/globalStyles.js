@@ -8,7 +8,7 @@ export default {
     padding: 20,
     marginHorizontal: 10,
     marginVertical: 10,
-    fontSize: 18,
+    fontSize: 21,
     borderRadius: 6,
     backgroundColor: "rgba(255,255,255,0.8)",
     minWidth: "70%",
