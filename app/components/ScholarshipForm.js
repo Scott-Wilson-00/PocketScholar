@@ -30,15 +30,12 @@ function ScholarshipForm(props) {
         ["criteria", entries.criteria],
         ["essayTopic", entries.essayTopic],
       ]);
-
-      // Sets the scholarship's list name state in Scholarship.js
-      props.setListName(
+      // Defaults to 'New Scholarship' when field left empty
+      props.updateListDisplayName(
         entries.name !== null && entries.name.length > 0
           ? entries.name
           : "New Scholarship"
       );
-      // Saves the scholarship's list name in Scholarship.js asyncstorage
-      props.saveListName();
     } catch (err) {
       console.log(err);
     }
@@ -67,6 +64,7 @@ function ScholarshipForm(props) {
   };
 
   useEffect(() => {
+    /** Retrieves form data on modal load */
     loadEntries();
   }, []);
 
@@ -81,6 +79,8 @@ function ScholarshipForm(props) {
           criteria: initCriteria,
           essayTopic: initEssayTopic,
         }}
+        // Functions to call when modal closes
+        // values Array<string> of formik textinput values
         onSubmit={(values) => {
           storeEntries(values);
           Keyboard.dismiss();
@@ -88,6 +88,7 @@ function ScholarshipForm(props) {
           props.closeModal();
         }}
       >
+        {/* Premade props from formik */}
         {(formikProps) => (
           <View style={{ alignItems: "center" }}>
             {/* Form Inputs  */}

@@ -9,7 +9,6 @@ import {
   KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
-//import { useStateWithCallbackLazy } from "use-state-with-callback";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
@@ -18,28 +17,35 @@ import ScholarshipForm from "./ScholarshipForm";
 function Scholarship(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const [keyboardCanShift, setKeyboardCanShift] = useState(false);
-  const [listName, setListName] = useState("New Scholarship");
+  const [listName, setListDisplayName] = useState("New Scholarship");
 
-  const saveListName = async () => {
+  const saveListDisplayName = async (nameToStore) => {
+    /** Saves the display name to local storage  */
     try {
-      await AsyncStorage.setItem("listName", listName);
-      console.log("saved name:" + listName);
-    } catch (err) {
-      console.log(err);
+      await AsyncStorage.setItem("listName", nameToStore);
+    } catch (error) {
+      console.log(error);
     }
   };
 
   const loadListName = async () => {
+    /** Loads the display name from local storage */
     try {
-      const value = await AsyncStorage.getItem("listName");
-      setListName(value);
-      console.log("Loaded List Name: " + value);
+      const loadedName = await AsyncStorage.getItem("listName");
+      setListDisplayName(loadedName);
     } catch (err) {
       console.log(err);
     }
   };
 
+  const updateListDisplayName = (newName) => {
+    /** Changes the display name when scholarship form is submitted */
+    setListDisplayName(newName);
+    saveListDisplayName(newName);
+  };
+
   useEffect(() => {
+    /** Retrieves display name on screen load */
     loadListName();
   }, []);
 
@@ -50,10 +56,11 @@ function Scholarship(props) {
         visible={modalVisible}
         onRequestClose={() => setModalVisible(!modalVisible)}
       >
+        {/* Closes keyboard when clicking anywhere on screen */}
         <Pressable
           onPress={() => {
-            setKeyboardCanShift(false);
             Keyboard.dismiss();
+            setKeyboardCanShift(false);
           }}
           style={{ flex: 1 }}
         >
@@ -71,9 +78,8 @@ function Scholarship(props) {
               {/* Editable fields and button to submit and close*/}
               <ScholarshipForm
                 closeModal={() => setModalVisible(false)}
-                saveListName={saveListName}
                 setKeyboardCanShift={setKeyboardCanShift}
-                setListName={setListName}
+                updateListDisplayName={updateListDisplayName}
               />
             </KeyboardAvoidingView>
           </ImageBackground>
