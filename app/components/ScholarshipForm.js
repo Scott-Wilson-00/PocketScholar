@@ -24,11 +24,11 @@ function ScholarshipForm(props) {
     /** Stores Formik form entries in device's local storage */
     try {
       await AsyncStorage.multiSet([
-        ["name", entries.name],
-        ["deadline", entries.deadline],
-        ["value", entries.value],
-        ["criteria", entries.criteria],
-        ["essayTopic", entries.essayTopic],
+        ["name" + props.id, entries.name],
+        ["deadline" + props.id, entries.deadline],
+        ["value" + props.id, entries.value],
+        ["criteria" + props.id, entries.criteria],
+        ["essayTopic" + props.id, entries.essayTopic],
       ]);
       // Defaults to 'New Scholarship' when field left empty
       props.updateListDisplayName(
@@ -45,11 +45,11 @@ function ScholarshipForm(props) {
     /** Retrieves entered data from device's local storage */
     try {
       const retrievedData = await AsyncStorage.multiGet([
-        "name",
-        "deadline",
-        "value",
-        "criteria",
-        "essayTopic",
+        "name" + props.id,
+        "deadline" + props.id,
+        "value" + props.id,
+        "criteria" + props.id,
+        "essayTopic" + props.id,
       ]);
       setInitName(retrievedData[0][1] !== null ? retrievedData[0][1] : "");
       setInitDeadline(retrievedData[1][1] !== null ? retrievedData[1][1] : "");

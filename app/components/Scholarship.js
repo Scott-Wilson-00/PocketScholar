@@ -17,12 +17,12 @@ import ScholarshipForm from "./ScholarshipForm";
 function Scholarship(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const [keyboardCanShift, setKeyboardCanShift] = useState(false);
-  const [listName, setListDisplayName] = useState("New Scholarship");
+  const [listName, setListDisplayName] = useState();
 
   const saveListDisplayName = async (nameToStore) => {
     /** Saves the display name to local storage  */
     try {
-      await AsyncStorage.setItem("listName", nameToStore);
+      await AsyncStorage.setItem("listName" + props.id, nameToStore);
     } catch (error) {
       console.log(error);
     }
@@ -31,8 +31,12 @@ function Scholarship(props) {
   const loadListName = async () => {
     /** Loads the display name from local storage */
     try {
-      const loadedName = await AsyncStorage.getItem("listName");
-      setListDisplayName(loadedName);
+      const loadedName = await AsyncStorage.getItem("listName" + props.id);
+      if (loadedName !== null) {
+        setListDisplayName(
+          loadedName.length > 0 ? loadedName : "New Scholarship"
+        );
+      }
     } catch (err) {
       console.log(err);
     }
@@ -51,6 +55,7 @@ function Scholarship(props) {
 
   return (
     <View>
+      {/* Modal Containing the scholarship form */}
       <Modal
         animationType="slide"
         visible={modalVisible}
@@ -78,6 +83,7 @@ function Scholarship(props) {
               {/* Editable fields and button to submit and close*/}
               <ScholarshipForm
                 closeModal={() => setModalVisible(false)}
+                id={props.id}
                 setKeyboardCanShift={setKeyboardCanShift}
                 updateListDisplayName={updateListDisplayName}
               />
