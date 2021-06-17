@@ -13,7 +13,9 @@ function TopBar(props) {
     handleButtonPress = () => navigation.navigate(screenNames.home);
   } else {
     image = images.back;
-    handleButtonPress = () => navigation.goBack();
+    handleButtonPress = () => {
+      navigation.goBack();
+    };
   }
 
   return (
@@ -63,11 +65,13 @@ const styles = StyleSheet.create({
 TopBar.propTypes = {
   titleText: PropTypes.string,
   isHome: PropTypes.bool,
+  saveScholarships: PropTypes.func,
 };
 
 TopBar.defaultProps = {
   titleText: "!!!!!!",
   isHome: false,
+  saveScholarships: null,
 };
 
 export default TopBar;

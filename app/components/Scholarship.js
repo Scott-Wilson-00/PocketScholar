@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import {
   View,
   Pressable,
@@ -14,97 +14,127 @@ import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import ScholarshipForm from "./ScholarshipForm";
 
-function Scholarship(props) {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [keyboardCanShift, setKeyboardCanShift] = useState(false);
-  const [listName, setListDisplayName] = useState();
+class Scholarship extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalVisible: false,
+      keyboardCanShift: false,
+      listName: "",
+    };
+  }
 
-  const saveListDisplayName = async (nameToStore) => {
+  setModalVisible = (isModalVisible) => {
+    this.setState({ modalVisible: isModalVisible });
+  };
+  setKeyboardCanShift = (canShift) => {
+    this.setState({ keyboardCanShift: canShift });
+  };
+  setListName = (newName) => {
+    this.setState({ listName: newName });
+  };
+
+  saveListDisplayName = async (nameToStore, id) => {
     /** Saves the display name to local storage  */
     try {
-      await AsyncStorage.setItem("listName" + props.id, nameToStore);
+      await AsyncStorage.setItem("listName" + id, nameToStore);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const loadListName = async () => {
+  runTest = () => console.log("function ran on scholarship " + this.props.id);
+
+  loadListName = async () => {
     /** Loads the display name from local storage */
     try {
-      const loadedName = await AsyncStorage.getItem("listName" + props.id);
+      const loadedName = await AsyncStorage.getItem("listName" + this.props.id);
       if (loadedName !== null) {
-        setListDisplayName(
+        this.setListName(
           loadedName.length > 0 ? loadedName : "New Scholarship"
         );
+      } else {
+        // this.setListName("New Scholarship");
       }
+      console.log("name loaded: " + loadedName);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const updateListDisplayName = (newName) => {
+  updateListDisplayName = (newName) => {
     /** Changes the display name when scholarship form is submitted */
-    setListDisplayName(newName);
-    saveListDisplayName(newName);
+    this.setListName(newName);
+    this.saveListDisplayName(newName, this.props.id);
   };
 
-  useEffect(() => {
+  componentDidMount() {
     /** Retrieves display name on screen load */
-    loadListName();
-  }, []);
+    this.loadListName(this.props.id);
+  }
 
-  return (
-    <View>
-      {/* Modal Containing the scholarship form */}
-      <Modal
-        animationType="slide"
-        visible={modalVisible}
-        onRequestClose={() => setModalVisible(!modalVisible)}
-      >
-        {/* Closes keyboard when clicking anywhere on screen */}
-        <Pressable
-          onPress={() => {
-            Keyboard.dismiss();
-            setKeyboardCanShift(false);
-          }}
-          style={{ flex: 1 }}
+  render() {
+    return (
+      <View>
+        {/* Modal Containing the scholarship form */}
+        <Modal
+          animationType="slide"
+          visible={this.state.modalVisible}
+          onRequestClose={() => this.setModalVisible(!this.state.modalVisible)}
         >
-          <ImageBackground
-            source={images.background}
-            style={globalStyles.background}
+          {/* Closes keyboard when clicking anywhere on screen */}
+          <Pressable
+            onPress={() => {
+              Keyboard.dismiss();
+              this.setKeyboardCanShift(false);
+            }}
+            style={{ flex: 1 }}
           >
-            <KeyboardAvoidingView
-              behavior={Platform.OS === "ios" ? "padding" : "height"}
-              enabled={keyboardCanShift}
-              style={styles.modalContentContainer}
+            <ImageBackground
+              source={images.background}
+              style={globalStyles.background}
             >
-              {/* Edit Scholarship title*/}
-              <Text style={styles.editTitle}>Edit Scholarship</Text>
-              {/* Editable fields and button to submit and close*/}
-              <ScholarshipForm
-                closeModal={() => setModalVisible(false)}
-                id={props.id}
-                setKeyboardCanShift={setKeyboardCanShift}
-                updateListDisplayName={updateListDisplayName}
-              />
-            </KeyboardAvoidingView>
-          </ImageBackground>
-        </Pressable>
-      </Modal>
+              <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : "height"}
+                enabled={this.state.keyboardCanShift}
+                style={styles.modalContentContainer}
+              >
+                {/* Edit Scholarship title*/}
+                <Text style={styles.editTitle}>Edit Scholarship</Text>
+                {/* Editable fields and button to submit and close*/}
+                <ScholarshipForm
+                  closeModal={() => this.setModalVisible(false)}
+                  id={this.props.id}
+                  setKeyboardCanShift={this.setKeyboardCanShift}
+                  updateListDisplayName={this.updateListDisplayName}
+                />
+              </KeyboardAvoidingView>
+            </ImageBackground>
+          </Pressable>
+        </Modal>
 
-      {/* A scholarship that can be pressed to open a formik form with all the info*/}
-      <Pressable
-        style={styles.selectable}
-        onPress={() => {
-          setModalVisible(true);
-        }}
-      >
-        <Text numberOfLines={1} style={styles.name}>
-          {listName}
-        </Text>
-      </Pressable>
-    </View>
-  );
+        {/* A scholarship that can be pressed to open a formik form with all the info*/}
+        <Pressable
+          style={styles.selectable}
+          onPress={() => {
+            this.setModalVisible(true);
+          }}
+        >
+          <Text numberOfLines={1} style={styles.name}>
+            {this.state.listName}
+          </Text>
+          <Text
+            style={styles.removeButton}
+            onPress={() =>
+              this.props.removeScholarship(this.props.id, this.props.index)
+            }
+          >
+            -
+          </Text>
+        </Pressable>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -124,13 +154,21 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 22,
     paddingHorizontal: "5%",
+    flex: 10,
+  },
+  removeButton: {
+    color: "white",
+    fontSize: 40,
+    marginHorizontal: "5%",
+    flex: 1,
   },
   selectable: {
-    alignItems: "flex-start",
+    alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.6)",
     borderRadius: 25,
+    flexDirection: "row",
     height: 75,
-    justifyContent: "center",
+    justifyContent: "space-between",
     marginHorizontal: 15,
     marginVertical: 15,
     width: "90%",
