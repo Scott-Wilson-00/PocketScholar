@@ -24,18 +24,34 @@ class Scholarship extends Component {
     };
   }
 
+  /**
+   * Changes the state of the modalVisible 'hook'
+   * @param {boolean} isModalVisible Whether the modal should be visible
+   */
   setModalVisible = (isModalVisible) => {
     this.setState({ modalVisible: isModalVisible });
   };
+  /**
+   * Changes the state of the keyboardCandShift 'hook'
+   * @param {boolean} canShift Whether the keyboard can shift
+   */
   setKeyboardCanShift = (canShift) => {
     this.setState({ keyboardCanShift: canShift });
   };
+  /**
+   * Changes the state of the listName 'hook'
+   * @param {String} newName The new name to be set
+   */
   setListName = (newName) => {
     this.setState({ listName: newName });
   };
 
+  /**
+   * Stores scholarship display name in local storage
+   * @param {String} nameToStore The name to store
+   * @param {Number} id The unique id of the scholarship
+   */
   saveListDisplayName = async (nameToStore, id) => {
-    /** Saves the display name to local storage  */
     try {
       await AsyncStorage.setItem("listName" + id, nameToStore);
     } catch (error) {
@@ -43,29 +59,34 @@ class Scholarship extends Component {
     }
   };
 
-  runTest = () => console.log("function ran on scholarship " + this.props.id);
+  /**
+   * Neatly sets and saves the new name of a scholarship
+   * @param {String} newName The name to be set and saved
+   */
+  updateListDisplayName = (newName) => {
+    this.setListName(newName);
+    this.saveListDisplayName(newName, this.props.id);
+  };
 
+  /**
+   * Loads the scholarship display name from local storage
+   */
   loadListName = async () => {
     /** Loads the display name from local storage */
     try {
       const loadedName = await AsyncStorage.getItem("listName" + this.props.id);
+      // If the retrieved name is not found or empty, default to 'New Scholarship'
       if (loadedName !== null) {
         this.setListName(
           loadedName.length > 0 ? loadedName : "New Scholarship"
         );
       } else {
-        // this.setListName("New Scholarship");
+        this.setListName("New Scholarship");
       }
       console.log("name loaded: " + loadedName);
     } catch (err) {
       console.log(err);
     }
-  };
-
-  updateListDisplayName = (newName) => {
-    /** Changes the display name when scholarship form is submitted */
-    this.setListName(newName);
-    this.saveListDisplayName(newName, this.props.id);
   };
 
   componentDidMount() {
@@ -113,16 +134,19 @@ class Scholarship extends Component {
           </Pressable>
         </Modal>
 
-        {/* A scholarship that can be pressed to open a formik form with all the info*/}
+        {/* Contents of the scholarship component (excluding modal)*/}
+        {/* The entire scholarship can be clicked to open the modal */}
         <Pressable
           style={styles.selectable}
           onPress={() => {
             this.setModalVisible(true);
           }}
         >
+          {/* The display name of the scholarship */}
           <Text numberOfLines={1} style={styles.name}>
             {this.state.listName}
           </Text>
+          {/* Button to delete the scholarship */}
           <Text
             style={styles.removeButton}
             onPress={() =>

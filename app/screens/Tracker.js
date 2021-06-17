@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -15,11 +15,14 @@ import images from "../config/images";
 import screenNames from "../config/screenNames";
 
 function Tracker(props) {
+  const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [scholarshipIDs, setScholarshipIDs] = useState([]);
-  const scholarshipComponents = useRef({});
   const componentRefs = useRef([]);
 
+  /**
+   * Adds a scholarship with a unique ID to the tracker list
+   */
   const addScholarship = () => {
     setScholarshipIDs([...scholarshipIDs, nextID]);
     const currentID = nextID;
@@ -27,18 +30,25 @@ function Tracker(props) {
     console.log("----------------");
   };
 
+  /**
+   * Deletes the scholarship at the specified index
+   * @param  {[Number]} id The unique id of the scholarship
+   * @param  {[Number]} index The current index of the scholarship
+   */
   const removeScholarship = (id, index) => {
     console.log("Removed Scholarship at Index: " + index);
     // Remove id from list to be rendered
     const scholarshipIDsCopy = [...scholarshipIDs];
     scholarshipIDsCopy.splice(index, 1);
     setScholarshipIDs(scholarshipIDsCopy);
-    // Deletes scholarship from list of components
-    delete scholarshipComponents.current["id" + id];
+    // Reloads display names of all other scholarships
     reloadListNames(id);
     // console.log(scholarshipIDs);
   };
 
+  /**
+   * Reloads scholarship display names, excluding at the specified index ??
+   */
   const reloadListNames = async (id) => {
     for (let i = 0; i < componentRefs.current.length; i++) {
       if (componentRefs.current[i] !== null && i !== id) {
@@ -50,19 +60,21 @@ function Tracker(props) {
 
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
-      {/* The contents at the top of the screen */}
+      {/* Contains the contents at the top of the screen */}
       <View style={styles.topOfScreen}>
         <TopBar titleText={screenNames.tracker} />
         {/* A scrolling list of scholarships */}
         <View style={styles.listContainer}>
-          <ScrollView style={styles.scrollingList}>
+          <ScrollView ref={scrollList} style={styles.scrollingList}>
             {/* Maps out all scholarship IDs onto the display */}
             {scholarshipIDs.map((id, index) => {
               console.log("Id: " + id + " Index: " + index);
 
+              /* Callback adds the reference of the rendered scholarship
+                to the list of references*/
               const callbackRef = (ref) => (componentRefs.current[id] = ref);
 
-              scholarshipComponents.current["id" + id] = (
+              return (
                 <Scholarship
                   id={id}
                   key={index}
@@ -71,20 +83,25 @@ function Tracker(props) {
                   removeScholarship={removeScholarship}
                 />
               );
-
-              return scholarshipComponents.current["id" + id];
             })}
+            {/* Placeholder view allows scrollToEnd to show new scholarship */}
+            <View style={{ height: 90 }}></View>
           </ScrollView>
         </View>
       </View>
-      {/* Bottom of the Screen --> Contains Add Scholarship prompt and button  */}
+      {/* Bottom of the screen, containing Add Scholarship prompt and button  */}
       <View style={styles.bottomOfScreen}>
         <View style={styles.addScholarshipPrompt}>
-          <Text style={styles.addScholarshipText} onPress={reloadListNames}>
-            Add Scholarship
-          </Text>
+          <Text style={styles.addScholarshipText}>Add Scholarship</Text>
         </View>
-        <Pressable onPress={addScholarship}>
+        {/* Add scholarship button */}
+        {/* Focus bottom of scholarship list */}
+        <Pressable
+          onPress={() => {
+            addScholarship();
+            scrollList.current.scrollToEnd();
+          }}
+        >
           <View style={styles.addScholarshipButton}>
             <Text style={styles.plusText}>+</Text>
           </View>

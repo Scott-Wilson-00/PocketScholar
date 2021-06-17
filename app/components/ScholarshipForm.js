@@ -18,10 +18,13 @@ function ScholarshipForm(props) {
   const [initDeadline, setInitDeadline] = useState("");
   const [initValue, setInitValue] = useState("");
   const [initCriteria, setInitCriteria] = useState("");
-  const [initEssayTopic, setInitEssayTopic] = useState("");
+  const [initEssayTopic, setInitTopic] = useState("");
 
+  /**
+   * Stores Formik form entries in device's local storage
+   * @param {Object} entries Key value pairs of each form field
+   */
   const storeEntries = async (entries) => {
-    /** Stores Formik form entries in device's local storage */
     try {
       await AsyncStorage.multiSet([
         ["name" + props.id, entries.name],
@@ -41,8 +44,11 @@ function ScholarshipForm(props) {
     }
   };
 
+  /**
+   * Retrieves entered data from device's local storage
+   * and sets the initial form values
+   */
   const loadEntries = async () => {
-    /** Retrieves entered data from device's local storage */
     try {
       const retrievedData = await AsyncStorage.multiGet([
         "name" + props.id,
@@ -55,16 +61,13 @@ function ScholarshipForm(props) {
       setInitDeadline(retrievedData[1][1] !== null ? retrievedData[1][1] : "");
       setInitValue(retrievedData[2][1] !== null ? retrievedData[2][1] : "");
       setInitCriteria(retrievedData[3][1] !== null ? retrievedData[3][1] : "");
-      setInitEssayTopic(
-        retrievedData[4][1] !== null ? retrievedData[4][1] : ""
-      );
+      setInitTopic(retrievedData[4][1] !== null ? retrievedData[4][1] : "");
     } catch (err) {
       console.log(err);
     }
   };
 
   useEffect(() => {
-    /** Retrieves form data on modal load */
     loadEntries();
   }, []);
 
