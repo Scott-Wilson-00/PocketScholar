@@ -187,8 +187,8 @@ const styles = StyleSheet.create({
   editTitle: {
     color: "white",
     fontSize: 30,
-    flex: 1,
-    paddingVertical: "12%",
+    flex: 0.4,
+    paddingBottom: "20%",
     textAlign: "center",
   },
   name: {

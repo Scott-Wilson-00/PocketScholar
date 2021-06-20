@@ -38,7 +38,7 @@ function Selectable(props) {
           </Text>
           {/* Text */}
           <View style={styles.modalTextContainer}>
-            <ScrollView style={styles.scrollingText}>
+            <ScrollView>
               <Text style={styles.modalText}>{text.aboutText.whatIsPS}</Text>
             </ScrollView>
           </View>
@@ -55,7 +55,13 @@ function Selectable(props) {
         style={styles.selectable}
         onPress={() => setModalVisible(true)}
       >
-        <Text style={styles.selectableText}>{props.text}</Text>
+        <Text
+          adjustsFontSizeToFit={true}
+          numberOfLines={2}
+          style={styles.selectableText}
+        >
+          {props.text}
+        </Text>
       </Pressable>
     </View>
   );
@@ -92,10 +98,9 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 30,
-    paddingTop: 30,
-    paddingHorizontal: 10,
+    paddingTop: 50,
+    paddingHorizontal: "5%",
   },
-  scrollingText: {},
   selectable: {
     alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -105,6 +110,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
     marginVertical: 15,
     width: "90%",
+    paddingVertical: 10,
   },
   selectableText: {
     color: "white",

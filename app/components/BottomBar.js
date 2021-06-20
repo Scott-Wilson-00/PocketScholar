@@ -6,7 +6,13 @@ function BottomBar(props) {
   return (
     <View style={styles.bottomBarContainer}>
       <View style={styles.bottomBar}>
-        <Text style={styles.message}>{props.message}</Text>
+        <Text
+          adjustsFontSizeToFit={true}
+          numberOfLines={1}
+          style={styles.message}
+        >
+          {props.message}
+        </Text>
       </View>
     </View>
   );
@@ -22,6 +28,7 @@ const styles = StyleSheet.create({
     borderRadius: 80,
     height: 50,
     width: "80%",
+    paddingVertical: 10,
   },
   bottomBarContainer: {
     alignItems: "center",

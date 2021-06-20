@@ -158,9 +158,9 @@ function Tracker(props) {
           <Text
             style={styles.addScholarshipText}
             onPress={() => {
-              // AsyncStorage.multiRemove(['nextID', 'idList']);
-              saveNextID(0);
-              saveScholarshipIDs([]);
+              AsyncStorage.multiRemove(["nextID", "idList"]);
+              // saveNextID(0);
+              // saveScholarshipIDs([]);
             }}
           >
             Add Scholarship
