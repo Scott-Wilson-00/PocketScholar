@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component, createRef } from "react";
 import {
   View,
   Pressable,
@@ -22,6 +22,7 @@ class Scholarship extends Component {
       keyboardCanShift: false,
       listName: "",
     };
+    this.mountedRef = createRef(true);
   }
 
   /**
@@ -29,25 +30,31 @@ class Scholarship extends Component {
    * @param {boolean} isModalVisible Whether the modal should be visible
    */
   setModalVisible = (isModalVisible) => {
-    this.setState({ modalVisible: isModalVisible });
+    if (this.mountedRef.current) {
+      this.setState({ modalVisible: isModalVisible });
+    }
   };
   /**
    * Changes the state of the keyboardCandShift 'hook'
    * @param {boolean} canShift Whether the keyboard can shift
    */
   setKeyboardCanShift = (canShift) => {
-    this.setState({ keyboardCanShift: canShift });
+    if (this.mountedRef.current) {
+      this.setState({ keyboardCanShift: canShift });
+    }
   };
   /**
    * Changes the state of the listName 'hook'
    * @param {String} newName The new name to be set
    */
   setListName = (newName) => {
-    this.setState({ listName: newName });
+    if (this.mountedRef.current) {
+      this.setState({ listName: newName });
+    }
   };
 
   /**
-   * Stores scholarship display name in local storage
+   * Saves scholarship display name in local storage
    * @param {String} nameToStore The name to store
    * @param {Number} id The unique id of the scholarship
    */
@@ -74,24 +81,34 @@ class Scholarship extends Component {
   loadListName = async () => {
     /** Loads the display name from local storage */
     try {
-      const loadedName = await AsyncStorage.getItem("listName" + this.props.id);
-      // If the retrieved name is not found or empty, default to 'New Scholarship'
-      if (loadedName !== null) {
-        this.setListName(
-          loadedName.length > 0 ? loadedName : "New Scholarship"
+      if (this.mountedRef.current) {
+        const loadedName = await AsyncStorage.getItem(
+          "listName" + this.props.id
         );
-      } else {
-        this.setListName("New Scholarship");
+        // If the retrieved name is not found or empty, default to 'New Scholarship'
+        if (loadedName != null) {
+          this.setListName(
+            loadedName.length > 0 ? loadedName : "New Scholarship"
+          );
+        } else {
+          this.setListName("New Scholarship");
+        }
+        // return this.state.listName;
       }
-      console.log("name loaded: " + loadedName);
     } catch (err) {
       console.log(err);
     }
   };
 
+  // Runs on component mount
   componentDidMount() {
-    /** Retrieves display name on screen load */
-    this.loadListName(this.props.id);
+    this.mountedRef.current = true;
+    this.loadListName();
+  }
+
+  // Runs before component unmount
+  componentWillUnmount() {
+    this.mountedRef.current = false;
   }
 
   render() {

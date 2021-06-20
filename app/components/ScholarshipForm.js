@@ -24,7 +24,7 @@ function ScholarshipForm(props) {
    * Stores Formik form entries in device's local storage
    * @param {Object} entries Key value pairs of each form field
    */
-  const storeEntries = async (entries) => {
+  const saveEntries = async (entries) => {
     try {
       await AsyncStorage.multiSet([
         ["name" + props.id, entries.name],
@@ -33,7 +33,7 @@ function ScholarshipForm(props) {
         ["criteria" + props.id, entries.criteria],
         ["essayTopic" + props.id, entries.essayTopic],
       ]);
-      // Defaults to 'New Scholarship' when field left empty
+      // Defaults display name to 'New Scholarship' when field left empty
       props.updateListDisplayName(
         entries.name !== null && entries.name.length > 0
           ? entries.name
@@ -67,6 +67,7 @@ function ScholarshipForm(props) {
     }
   };
 
+  // Runs on component mount
   useEffect(() => {
     loadEntries();
   }, []);
@@ -85,7 +86,7 @@ function ScholarshipForm(props) {
         // Functions to call when modal closes
         // values Array<string> of formik textinput values
         onSubmit={(values) => {
-          storeEntries(values);
+          saveEntries(values);
           Keyboard.dismiss();
           props.setKeyboardCanShift(false);
           props.closeModal();
