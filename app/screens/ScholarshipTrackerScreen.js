@@ -14,7 +14,7 @@ import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
 
-function Tracker(props) {
+function ScholarshipTracker(props) {
   const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [scholarshipIDs, setScholarshipIDs] = useState([]);
@@ -111,9 +111,6 @@ function Tracker(props) {
         i !== id
       ) {
         await componentRefs.current[i].loadListName();
-        // if (passedName !== undefined && passedName !== null) {
-        //   componentRefs.current[i].setListName(passedName);
-        // }
       }
     }
   };
@@ -225,4 +222,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Tracker;
+export default ScholarshipTracker;

@@ -22,6 +22,7 @@ export default {
     justifyContent: "space-between",
     marginHorizontal: 10,
     marginVertical: 10,
+    paddingVertical: 10,
   },
   scrollView: {
     width: "100%",

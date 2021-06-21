@@ -7,7 +7,8 @@ import HomeScreen from "./app/screens/HomeScreen";
 import AboutScreen from "./app/screens/AboutScreen";
 import GetStartedScreen from "./app/screens/GetStartedScreen";
 import ChallengesScreen from "./app/screens/ChallengesScreen";
-import Tracker from "./app/screens/Tracker";
+import ScholarshipTracker from "./app/screens/ScholarshipTrackerScreen";
+import ActivityListScreen from "./app/screens/ActivityListScreen";
 
 const Stack = createStackNavigator();
 
@@ -29,7 +30,14 @@ export default function App() {
           name={screenNames.challenges}
           component={ChallengesScreen}
         />
-        <Stack.Screen name={screenNames.tracker} component={Tracker} />
+        <Stack.Screen
+          name={screenNames.tracker}
+          component={ScholarshipTracker}
+        />
+        <Stack.Screen
+          name={screenNames.activities}
+          component={ActivityListScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

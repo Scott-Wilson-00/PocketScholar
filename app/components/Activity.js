@@ -12,9 +12,9 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
-import ScholarshipForm from "./ScholarshipForm";
+import ActivityForm from "./ActivityForm";
 
-class Scholarship extends Component {
+class Activity extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,20 +54,20 @@ class Scholarship extends Component {
   };
 
   /**
-   * Saves scholarship display name in local storage
+   * Saves activity display name in local storage
    * @param {String} nameToStore The name to store
-   * @param {Number} id The unique id of the scholarship
+   * @param {Number} id The unique id of the activity
    */
   saveListDisplayName = async (nameToStore, id) => {
     try {
-      await AsyncStorage.setItem("listName" + id, nameToStore);
+      await AsyncStorage.setItem("activityListName" + id, nameToStore);
     } catch (error) {
       console.log(error);
     }
   };
 
   /**
-   * Neatly sets and saves the new name of a scholarship
+   * Neatly sets and saves the new name of a activity
    * @param {String} newName The name to be set and saved
    */
   updateListDisplayName = (newName) => {
@@ -76,21 +76,19 @@ class Scholarship extends Component {
   };
 
   /**
-   * Loads the scholarship display name from local storage
+   * Loads the activity display name from local storage
    */
   loadListName = async () => {
     try {
       if (this.mountedRef.current) {
         const loadedName = await AsyncStorage.getItem(
-          "listName" + this.props.id
+          "activityListName" + this.props.id
         );
-        // If the retrieved name is not found or empty, default to 'New Scholarship'
+        // If the retrieved name is not found or empty, default to 'New Activity'
         if (loadedName != null) {
-          this.setListName(
-            loadedName.length > 0 ? loadedName : "New Scholarship"
-          );
+          this.setListName(loadedName.length > 0 ? loadedName : "New Activity");
         } else {
-          this.setListName("New Scholarship");
+          this.setListName("New Activity");
         }
       }
     } catch (err) {
@@ -99,17 +97,17 @@ class Scholarship extends Component {
   };
 
   /**
-   * Clears stored entries from deleted scholarships
+   * Clears stored entries from deleted activities
    */
   clearData = async () => {
     try {
       await AsyncStorage.multiRemove([
-        "listName" + this.props.id,
-        "name" + this.props.id,
-        "deadline" + this.props.id,
-        "value" + this.props.id,
-        "criteria" + this.props.id,
-        "essayTopic" + this.props.id,
+        "activityListName" + this.props.id,
+        "activityName" + this.props.id,
+        "involvementDate" + this.props.id,
+        "commitment" + this.props.id,
+        "roles" + this.props.id,
+        "awards" + this.props.id,
       ]);
     } catch (error) {
       console.log(error);
@@ -130,7 +128,7 @@ class Scholarship extends Component {
   render() {
     return (
       <View>
-        {/* Modal Containing the scholarship form */}
+        {/* Modal Containing the activity form */}
         <Modal
           animationType="slide"
           visible={this.state.modalVisible}
@@ -153,10 +151,10 @@ class Scholarship extends Component {
                 enabled={this.state.keyboardCanShift}
                 style={styles.modalContentContainer}
               >
-                {/* Edit Scholarship title*/}
-                <Text style={styles.editTitle}>Edit Scholarship</Text>
+                {/* Edit activity title*/}
+                <Text style={styles.editTitle}>Edit Activity</Text>
                 {/* Editable fields and button to submit and close*/}
-                <ScholarshipForm
+                <ActivityForm
                   closeModal={() => this.setModalVisible(false)}
                   id={this.props.id}
                   setKeyboardCanShift={this.setKeyboardCanShift}
@@ -167,24 +165,24 @@ class Scholarship extends Component {
           </Pressable>
         </Modal>
 
-        {/* Contents of the scholarship component (excluding modal)*/}
-        {/* The entire scholarship can be clicked to open the modal */}
+        {/* Contents of the activity component (excluding modal)*/}
+        {/* The entire activity can be clicked to open the modal */}
         <Pressable
           style={styles.selectable}
           onPress={() => {
             this.setModalVisible(true);
           }}
         >
-          {/* The display name of the scholarship */}
+          {/* The display name of the activity */}
           <Text numberOfLines={1} style={styles.name}>
             {this.state.listName}
           </Text>
-          {/* Button to delete the scholarship */}
+          {/* Button to delete the activity */}
           <Text
             style={styles.removeButton}
             onPress={() => {
               this.clearData();
-              this.props.removeScholarship(this.props.id, this.props.index);
+              this.props.removeActivity(this.props.id, this.props.index);
             }}
           >
             -
@@ -233,4 +231,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Scholarship;
+export default Activity;

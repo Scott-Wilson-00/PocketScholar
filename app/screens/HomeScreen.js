@@ -30,7 +30,10 @@ function HomeScreen(props) {
         {/* Row 2 */}
         <View style={styles.appRow}>
           <AppIcon image={images.tracker} screenName={screenNames.tracker} />
-          <AppIcon image={images.activity} />
+          <AppIcon
+            image={images.activity}
+            screenName={screenNames.activities}
+          />
           <AppIcon image={images.common} />
         </View>
         {/* Row 3 */}

@@ -22,11 +22,26 @@ function AboutScreen(props) {
       {/* Surrounds the list of pages */}
       <View style={globalStyles.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <SelectableInfo text="What Is PocketScholar?" />
-          <SelectableInfo text="Why Does PocketScholar Exist?" />
-          <SelectableInfo text="Why Does Any Of This Matter?" />
-          <SelectableInfo text="Do You Want My Money?" />
-          <SelectableInfo text="How Do I Use PocketScholar?" />
+          <SelectableInfo
+            text="What Is PocketScholar?"
+            color="rgba(255,0,0,0.6)"
+          />
+          <SelectableInfo
+            text="Why Does PocketScholar Exist?"
+            color="rgba(255,0,0,0.6)"
+          />
+          <SelectableInfo
+            text="Why Does Any Of This Matter?"
+            color="rgba(255,0,0,0.6)"
+          />
+          <SelectableInfo
+            text="Do You Want My Money?"
+            color="rgba(255,0,0,0.6)"
+          />
+          <SelectableInfo
+            text="How Do I Use PocketScholar?"
+            color="rgba(255,0,0,0.6)"
+          />
         </ScrollView>
       </View>
       {/* Page Footer */}
