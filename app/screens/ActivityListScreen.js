@@ -9,12 +9,22 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Activity from "../components/Activity";
+import colors from "../config/colors";
 import TopBar from "../components/TopBar";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
+import StyleSheetMaker from "../config/dynamicStyles";
 
 function ActivityListScreen(props) {
+  let activityStyle = StyleSheetMaker.createListItemStyle(
+    colors.activityListPage.selectable,
+    colors.activityListPage.displayText
+  );
+  let screenStyle = StyleSheetMaker.createListScreenStyle(
+    colors.activityListPage.scrollContainer
+  );
+
   const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [activityIDs, setActivityIDs] = useState([]);
@@ -124,10 +134,10 @@ function ActivityListScreen(props) {
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
       {/* Contains the contents at the top of the screen */}
-      <View style={styles.topOfScreen}>
+      <View style={screenStyle.topOfScreen}>
         <TopBar titleText={screenNames.activities} />
-        <View style={styles.listContainer}>
-          <ScrollView ref={scrollList} style={styles.scrollingList}>
+        <View style={screenStyle.listContainer}>
+          <ScrollView ref={scrollList} style={globalStyles.scrollView}>
             {/* Maps out all activity IDs onto the display */}
             {activityIDs.map((id, index) => {
               /* Callback adds the reference of the rendered activity
@@ -141,6 +151,7 @@ function ActivityListScreen(props) {
                   index={index}
                   ref={callbackRef}
                   removeActivity={removeActivity}
+                  styles={activityStyle}
                 />
               );
             })}
@@ -150,10 +161,10 @@ function ActivityListScreen(props) {
         </View>
       </View>
       {/* Bottom of the screen, containing Add Activity prompt and button  */}
-      <View style={styles.bottomOfScreen}>
-        <View style={styles.addActivityPrompt}>
+      <View style={screenStyle.bottomOfScreen}>
+        <View style={screenStyle.addPrompt}>
           <Text
-            style={styles.addActivityText}
+            style={screenStyle.addPromptText}
             onPress={() => {
               AsyncStorage.multiRemove(["nextActivityID", "activityIDList"]);
               // saveNextID(0);
@@ -171,8 +182,8 @@ function ActivityListScreen(props) {
             scrollList.current.scrollToEnd();
           }}
         >
-          <View style={styles.addActivityButton}>
-            <Text style={styles.plusText}>+</Text>
+          <View style={screenStyle.addButton}>
+            <Text style={screenStyle.addButtonText}>+</Text>
           </View>
         </Pressable>
       </View>
@@ -181,45 +192,5 @@ function ActivityListScreen(props) {
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  topOfScreen: {
-    justifyContent: "center",
-    height: "12%",
-    backgroundColor: "green",
-    flex: 7,
-  },
-  bottomOfScreen: {
-    backgroundColor: "white",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  },
-  listContainer: {
-    backgroundColor: "yellow",
-    borderRadius: 40,
-    marginHorizontal: "5%",
-    marginTop: 15,
-    flex: 6,
-    paddingVertical: 10,
-  },
-  scrollingList: {
-    width: "100%",
-  },
-  addActivityButton: {
-    backgroundColor: "pink",
-  },
-  addActivityPrompt: {
-    backgroundColor: "orange",
-    justifyContent: "center",
-  },
-  addActivityText: {
-    fontSize: 30,
-  },
-  plusText: {
-    fontSize: 30,
-  },
-});
 
 export default ActivityListScreen;

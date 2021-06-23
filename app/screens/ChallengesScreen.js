@@ -1,34 +1,57 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, ScrollView } from "react-native";
 import BottomBar from "../components/BottomBar";
+import colors from "../config/colors";
 import images from "../config/images";
 import SelectableInfo from "../components/SelectableInfo";
+import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
 import screenNames from "../config/screenNames";
 import globalStyles from "../config/globalStyles";
 
 function ChallengesScreen(props) {
+  let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(
+    colors.challengesPage.selectable,
+    colors.challengesPage.displayText,
+    colors.challengesPage.bodyBackground
+  );
+  let screenStyle = StyleSheetMaker.createInfoScreenStyle(
+    colors.challengesPage.scrollContainer
+  );
   return (
     <ImageBackground style={globalStyles.background} source={images.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
       <TopBar titleText={screenNames.challenges} />
       {/* Surrounds the list of pages */}
-      <View style={globalStyles.scrollContainer}>
+      <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <SelectableInfo text="Application Burnout" />
-          <SelectableInfo text="Staying Focused/Diligent" />
-          <SelectableInfo text="Discovering Your Passion" />
-          <SelectableInfo text="Time Management" />
-          <SelectableInfo text="Not Being Sick At Coding" />
+          <SelectableInfo
+            text="Application Burnout"
+            styles={selectableStyleSheet}
+          />
+          <SelectableInfo
+            text="Staying Focused/Diligent"
+            styles={selectableStyleSheet}
+          />
+          <SelectableInfo
+            text="Discovering Your Passion"
+            styles={selectableStyleSheet}
+          />
+          <SelectableInfo
+            text="Time Management"
+            styles={selectableStyleSheet}
+          />
+          <SelectableInfo
+            text="Not Being Sick At Coding"
+            styles={selectableStyleSheet}
+          />
         </ScrollView>
       </View>
       {/* Page Footer */}
-      <BottomBar message="Created by Scott Wilson" />
+      <BottomBar message="Work Smarter" />
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({});
 
 export default ChallengesScreen;

@@ -1,20 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   ImageBackground,
-  StyleSheet,
   View,
   ScrollView,
   Text,
   Pressable,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 import Scholarship from "../components/Scholarship";
+import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
 
 function ScholarshipTracker(props) {
+  let scholarshipStyle = StyleSheetMaker.createListItemStyle(
+    colors.scholarshipTrackerPage.selectable,
+    colors.scholarshipTrackerPage.displayText
+  );
+  let screenStyle = StyleSheetMaker.createListScreenStyle(
+    colors.scholarshipTrackerPage.scrollContainer
+  );
+
   const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [scholarshipIDs, setScholarshipIDs] = useState([]);
@@ -124,10 +133,10 @@ function ScholarshipTracker(props) {
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
       {/* Contains the contents at the top of the screen */}
-      <View style={styles.topOfScreen}>
+      <View style={screenStyle.topOfScreen}>
         <TopBar titleText={screenNames.tracker} />
-        <View style={styles.listContainer}>
-          <ScrollView ref={scrollList} style={styles.scrollingList}>
+        <View style={screenStyle.listContainer}>
+          <ScrollView ref={scrollList} style={screenStyle.scrollingList}>
             {/* Maps out all scholarship IDs onto the display */}
             {scholarshipIDs.map((id, index) => {
               /* Callback adds the reference of the rendered scholarship
@@ -141,6 +150,7 @@ function ScholarshipTracker(props) {
                   index={index}
                   ref={callbackRef}
                   removeScholarship={removeScholarship}
+                  styles={scholarshipStyle}
                 />
               );
             })}
@@ -150,10 +160,12 @@ function ScholarshipTracker(props) {
         </View>
       </View>
       {/* Bottom of the screen, containing Add Scholarship prompt and button  */}
-      <View style={styles.bottomOfScreen}>
-        <View style={styles.addScholarshipPrompt}>
+      <View style={screenStyle.bottomOfScreen}>
+        <View style={screenStyle.addPrompt}>
           <Text
-            style={styles.addScholarshipText}
+            style={screenStyle.addPromptText}
+            numberOfLines={1}
+            adjustsFontSizeToFit={true}
             onPress={() => {
               AsyncStorage.multiRemove(["nextID", "idList"]);
               // saveNextID(0);
@@ -171,8 +183,8 @@ function ScholarshipTracker(props) {
             scrollList.current.scrollToEnd();
           }}
         >
-          <View style={styles.addScholarshipButton}>
-            <Text style={styles.plusText}>+</Text>
+          <View style={screenStyle.addButton}>
+            <Text style={screenStyle.addButtonText}>+</Text>
           </View>
         </Pressable>
       </View>
@@ -181,45 +193,5 @@ function ScholarshipTracker(props) {
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  topOfScreen: {
-    justifyContent: "center",
-    height: "12%",
-    backgroundColor: "green",
-    flex: 7,
-  },
-  bottomOfScreen: {
-    backgroundColor: "white",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  },
-  listContainer: {
-    backgroundColor: "yellow",
-    borderRadius: 40,
-    marginHorizontal: "5%",
-    marginTop: 15,
-    flex: 6,
-    paddingVertical: 10,
-  },
-  scrollingList: {
-    width: "100%",
-  },
-  addScholarshipButton: {
-    backgroundColor: "pink",
-  },
-  addScholarshipPrompt: {
-    backgroundColor: "orange",
-    justifyContent: "center",
-  },
-  addScholarshipText: {
-    fontSize: 30,
-  },
-  plusText: {
-    fontSize: 30,
-  },
-});
 
 export default ScholarshipTracker;

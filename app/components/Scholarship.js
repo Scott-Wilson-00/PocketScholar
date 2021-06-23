@@ -4,15 +4,16 @@ import {
   Pressable,
   Text,
   Modal,
-  StyleSheet,
   ImageBackground,
   KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import ScholarshipForm from "./ScholarshipForm";
+import StyleSheetMaker from "../config/dynamicStyles";
 
 class Scholarship extends Component {
   constructor(props) {
@@ -23,6 +24,9 @@ class Scholarship extends Component {
       listName: "",
     };
     this.mountedRef = createRef(true);
+    this.formStyle = StyleSheetMaker.createFormStyle(
+      colors.scholarshipTrackerPage.formFieldBorder
+    );
   }
 
   /**
@@ -151,15 +155,18 @@ class Scholarship extends Component {
               <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
                 enabled={this.state.keyboardCanShift}
-                style={styles.modalContentContainer}
+                style={this.props.styles.modalContentContainer}
               >
                 {/* Edit Scholarship title*/}
-                <Text style={styles.editTitle}>Edit Scholarship</Text>
+                <Text style={this.props.styles.editTitle}>
+                  Edit Scholarship
+                </Text>
                 {/* Editable fields and button to submit and close*/}
                 <ScholarshipForm
                   closeModal={() => this.setModalVisible(false)}
                   id={this.props.id}
                   setKeyboardCanShift={this.setKeyboardCanShift}
+                  styles={this.formStyle}
                   updateListDisplayName={this.updateListDisplayName}
                 />
               </KeyboardAvoidingView>
@@ -170,18 +177,18 @@ class Scholarship extends Component {
         {/* Contents of the scholarship component (excluding modal)*/}
         {/* The entire scholarship can be clicked to open the modal */}
         <Pressable
-          style={styles.selectable}
+          style={this.props.styles.selectable}
           onPress={() => {
             this.setModalVisible(true);
           }}
         >
           {/* The display name of the scholarship */}
-          <Text numberOfLines={1} style={styles.name}>
+          <Text numberOfLines={1} style={this.props.styles.name}>
             {this.state.listName}
           </Text>
           {/* Button to delete the scholarship */}
           <Text
-            style={styles.removeButton}
+            style={this.props.styles.removeButton}
             onPress={() => {
               this.clearData();
               this.props.removeScholarship(this.props.id, this.props.index);
@@ -194,43 +201,5 @@ class Scholarship extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  modalContentContainer: {
-    alignItems: "center",
-    flex: 20,
-    justifyContent: "flex-end",
-  },
-  editTitle: {
-    color: "white",
-    fontSize: 30,
-    flex: 0.4,
-    paddingBottom: "20%",
-    textAlign: "center",
-  },
-  name: {
-    color: "white",
-    fontSize: 22,
-    paddingHorizontal: "5%",
-    flex: 10,
-  },
-  removeButton: {
-    color: "white",
-    fontSize: 40,
-    marginHorizontal: "5%",
-    flex: 1,
-  },
-  selectable: {
-    alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.6)",
-    borderRadius: 25,
-    flexDirection: "row",
-    height: 75,
-    justifyContent: "space-between",
-    marginHorizontal: 15,
-    marginVertical: 15,
-    width: "90%",
-  },
-});
 
 export default Scholarship;

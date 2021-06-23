@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     borderRadius: 80,
     height: 50,
     width: "80%",
+    paddingHorizontal: 10,
     paddingVertical: 10,
   },
   bottomBarContainer: {

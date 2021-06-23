@@ -8,8 +8,8 @@ import {
   Keyboard,
 } from "react-native";
 import { Formik } from "formik";
-import globalStyles from "../config/globalStyles";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 
 function ActivityForm(props) {
   // The states to be modified by the loadEntries asyncstorage function
@@ -77,7 +77,7 @@ function ActivityForm(props) {
   }, []);
 
   return (
-    <View style={styles.formContainer}>
+    <View style={props.styles.formContainer}>
       <Formik
         enableReinitialize
         initialValues={{
@@ -105,7 +105,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("activityName")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Name of activity/organization"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.activityName}
             />
             <TextInput
@@ -113,7 +113,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("involvementDate")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Period of Involvement"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.involvementDate}
             />
             <TextInput
@@ -122,7 +122,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("commitment")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Commitment: Hours/Week"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.commitment}
             />
             <TextInput
@@ -131,7 +131,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("roles")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Key Roles/Responsibilities"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.roles}
             />
             <TextInput
@@ -139,13 +139,13 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("awards")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Awards / Achievements"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.awards}
             />
             {/* Close and Update Form Button */}
             <Pressable onPress={formikProps.handleSubmit}>
-              <View style={styles.updateButton}>
-                <Text style={styles.updateButtonText}>Update Info</Text>
+              <View style={props.styles.updateButton}>
+                <Text style={props.styles.updateButtonText}>Update Info</Text>
               </View>
             </Pressable>
           </View>
@@ -154,28 +154,4 @@ function ActivityForm(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  formContainer: {
-    bottom: "7%",
-  },
-  inputContainer: {
-    alignItems: "center",
-  },
-  updateButton: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 10,
-    backgroundColor: "white",
-    height: 60,
-    width: 180,
-    borderColor: "black",
-    borderWidth: 4,
-    borderRadius: 10,
-  },
-  updateButtonText: {
-    fontSize: 20,
-  },
-});
-
 export default ActivityForm;

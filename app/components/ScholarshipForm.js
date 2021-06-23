@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Pressable,
-  Keyboard,
-} from "react-native";
+import { Text, View, TextInput, Pressable, Keyboard } from "react-native";
 import { Formik } from "formik";
-import globalStyles from "../config/globalStyles";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 
 function ScholarshipForm(props) {
   // The states to be modified by the loadEntries asyncstorage function
@@ -73,7 +66,7 @@ function ScholarshipForm(props) {
   }, []);
 
   return (
-    <View style={styles.formContainer}>
+    <View style={props.styles.formContainer}>
       <Formik
         enableReinitialize
         initialValues={{
@@ -101,7 +94,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("name")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Scholarship Name"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.name}
             />
             <TextInput
@@ -109,7 +102,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("deadline")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Deadline"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.deadline}
             />
             <TextInput
@@ -117,7 +110,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("value")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Value"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.value}
             />
             <TextInput
@@ -126,7 +119,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("criteria")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Criteria"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.criteria}
             />
             <TextInput
@@ -134,13 +127,13 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("essayTopic")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Essay Topic"
-              style={globalStyles.input}
+              style={props.styles.input}
               value={formikProps.values.essayTopic}
             />
             {/* Close and Update Form Button */}
             <Pressable onPress={formikProps.handleSubmit}>
-              <View style={styles.updateButton}>
-                <Text style={styles.updateButtonText}>Update Info</Text>
+              <View style={props.styles.updateButton}>
+                <Text style={props.styles.updateButtonText}>Update Info</Text>
               </View>
             </Pressable>
           </View>
@@ -149,28 +142,5 @@ function ScholarshipForm(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  formContainer: {
-    bottom: "7%",
-  },
-  inputContainer: {
-    alignItems: "center",
-  },
-  updateButton: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 10,
-    backgroundColor: "white",
-    height: 60,
-    width: 180,
-    borderColor: "black",
-    borderWidth: 4,
-    borderRadius: 10,
-  },
-  updateButtonText: {
-    fontSize: 20,
-  },
-});
 
 export default ScholarshipForm;

@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     width: 40,
   },
   titleText: {
+    color: "white",
     fontSize: 35,
   },
   topBar: {

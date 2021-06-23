@@ -9,10 +9,12 @@ import {
   KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
+import ActivityForm from "./ActivityForm";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
-import ActivityForm from "./ActivityForm";
+import StyleSheetMaker from "../config/dynamicStyles";
 
 class Activity extends Component {
   constructor(props) {
@@ -23,6 +25,9 @@ class Activity extends Component {
       listName: "",
     };
     this.mountedRef = createRef(true);
+    this.formStyle = StyleSheetMaker.createFormStyle(
+      colors.activityListPage.formFieldBorder
+    );
   }
 
   /**
@@ -149,15 +154,16 @@ class Activity extends Component {
               <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
                 enabled={this.state.keyboardCanShift}
-                style={styles.modalContentContainer}
+                style={this.props.styles.modalContentContainer}
               >
                 {/* Edit activity title*/}
-                <Text style={styles.editTitle}>Edit Activity</Text>
+                <Text style={this.props.styles.editTitle}>Edit Activity</Text>
                 {/* Editable fields and button to submit and close*/}
                 <ActivityForm
                   closeModal={() => this.setModalVisible(false)}
                   id={this.props.id}
                   setKeyboardCanShift={this.setKeyboardCanShift}
+                  styles={this.formStyle}
                   updateListDisplayName={this.updateListDisplayName}
                 />
               </KeyboardAvoidingView>
@@ -168,18 +174,18 @@ class Activity extends Component {
         {/* Contents of the activity component (excluding modal)*/}
         {/* The entire activity can be clicked to open the modal */}
         <Pressable
-          style={styles.selectable}
+          style={this.props.styles.selectable}
           onPress={() => {
             this.setModalVisible(true);
           }}
         >
           {/* The display name of the activity */}
-          <Text numberOfLines={1} style={styles.name}>
+          <Text numberOfLines={1} style={this.props.styles.name}>
             {this.state.listName}
           </Text>
           {/* Button to delete the activity */}
           <Text
-            style={styles.removeButton}
+            style={this.props.styles.removeButton}
             onPress={() => {
               this.clearData();
               this.props.removeActivity(this.props.id, this.props.index);
@@ -192,43 +198,5 @@ class Activity extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  modalContentContainer: {
-    alignItems: "center",
-    flex: 20,
-    justifyContent: "flex-end",
-  },
-  editTitle: {
-    color: "white",
-    fontSize: 30,
-    flex: 0.4,
-    paddingBottom: "20%",
-    textAlign: "center",
-  },
-  name: {
-    color: "white",
-    fontSize: 22,
-    paddingHorizontal: "5%",
-    flex: 10,
-  },
-  removeButton: {
-    color: "white",
-    fontSize: 40,
-    marginHorizontal: "5%",
-    flex: 1,
-  },
-  selectable: {
-    alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.6)",
-    borderRadius: 25,
-    flexDirection: "row",
-    height: 75,
-    justifyContent: "space-between",
-    marginHorizontal: 15,
-    marginVertical: 15,
-    width: "90%",
-  },
-});
 
 export default Activity;
