@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
+import colors from "./colors";
 
 export default class StyleSheetMaker {
   static createSelectableStyle(color, displayTextColor, bodyBackgroundColor) {
@@ -24,21 +25,27 @@ export default class StyleSheetMaker {
         flex: 1,
       },
       modalText: {
-        fontSize: 20,
+        fontSize: 22,
         color: "black",
+        textAlign: "left",
       },
       modalTextContainer: {
-        alignItems: "center",
+        alignItems: "flex-start",
         backgroundColor: bodyBackgroundColor,
         borderColor: "black",
         borderWidth: 3,
         borderRadius: 10,
         height: "70%",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         paddingTop: 20,
         width: "90%",
         paddingHorizontal: "5%",
         marginVertical: 10,
+      },
+      link: {
+        color: colors.resourcesPage.link,
+        fontSize: 25,
+        textAlign: "left",
       },
       modalTitle: {
         fontSize: 30,
@@ -209,6 +216,71 @@ export default class StyleSheetMaker {
       updateButtonText: {
         color: "white",
         fontSize: 20,
+      },
+    });
+  }
+  static createPromptStyle(color, displayTextColor, bodyBackgroundColor) {
+    return StyleSheet.create({
+      selectable: {
+        alignItems: "center",
+        backgroundColor: color,
+        borderRadius: 25,
+        height: 75,
+        justifyContent: "center",
+        marginHorizontal: 15,
+        marginVertical: 15,
+        width: "90%",
+        paddingVertical: 10,
+        borderColor: "black",
+        borderWidth: 3,
+      },
+      selectableText: {
+        color: displayTextColor,
+        fontSize: 25,
+        marginHorizontal: 10,
+        textAlign: "center",
+      },
+      modalBackground: {
+        alignItems: "center",
+        flex: 1,
+      },
+      modalTextContainer: {
+        alignItems: "flex-start",
+        backgroundColor: bodyBackgroundColor,
+        borderColor: "black",
+        borderWidth: 3,
+        borderRadius: 10,
+        height: "70%",
+        justifyContent: "flex-start",
+        paddingTop: 20,
+        width: "90%",
+        paddingHorizontal: "5%",
+        marginVertical: 10,
+      },
+      modalTitle: {
+        fontSize: 30,
+        paddingTop: 50,
+        paddingHorizontal: "5%",
+        color: "white",
+      },
+      closeButton: {
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 10,
+        backgroundColor: "black",
+        height: 60,
+        width: 180,
+        borderColor: "white",
+        borderWidth: 4,
+        borderRadius: 10,
+      },
+      closeButtonText: {
+        color: "white",
+        fontSize: 20,
+      },
+      input: {
+        fontSize: 20,
+        color: "black",
       },
     });
   }

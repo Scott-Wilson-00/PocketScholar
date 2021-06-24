@@ -28,23 +28,23 @@ function AboutScreen(props) {
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
           <SelectableInfo
-            text="What Is PocketScholar?"
+            title="What Is PocketScholar?"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Why Does PocketScholar Exist?"
+            title="Why Does PocketScholar Exist?"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Why Does Any Of This Matter?"
+            title="Why Does Any Of This Matter?"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Do You Want My Money?"
+            title="Do You Want My Money?"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="How Do I Use PocketScholar?"
+            title="How Do I Use PocketScholar?"
             styles={selectableStyleSheet}
           />
         </ScrollView>

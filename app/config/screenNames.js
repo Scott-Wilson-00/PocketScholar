@@ -5,6 +5,6 @@ export default {
   challenges: "Challenges",
   tracker: "Tracker",
   activities: "Activity List",
-  common: "Common Questions",
+  common: "Common Prompts",
   resources: "Resources",
 };

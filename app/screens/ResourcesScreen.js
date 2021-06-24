@@ -1,48 +1,51 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, ScrollView } from "react-native";
+import { View, ImageBackground, ScrollView } from "react-native";
 import BottomBar from "../components/BottomBar";
 import colors from "../config/colors";
-import images from "../config/images";
 import SelectableInfo from "../components/SelectableInfo";
 import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
-import screenNames from "../config/screenNames";
 import globalStyles from "../config/globalStyles";
+import images from "../config/images";
+import screenNames from "../config/screenNames";
 
-function GetStartedScreen(props) {
+function ResourcesScreen(props) {
   let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(
-    colors.getStartedPage.selectable,
-    colors.getStartedPage.displayText,
-    colors.getStartedPage.bodyBackground
+    colors.resourcesPage.selectable,
+    colors.resourcesPage.displayText,
+    colors.resourcesPage.bodyBackground
   );
   let screenStyle = StyleSheetMaker.createInfoScreenStyle(
-    colors.getStartedPage.scrollContainer
+    colors.resourcesPage.scrollContainer
   );
+
   return (
-    <ImageBackground style={globalStyles.background} source={images.background}>
+    <ImageBackground source={images.background} style={globalStyles.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
-      <TopBar titleText={screenNames.getStarted} />
+      <TopBar titleText={screenNames.about} />
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <SelectableInfo title="Standing Out" styles={selectableStyleSheet} />
           <SelectableInfo
-            title="Common Activities"
+            title="ScholarTree"
+            styles={selectableStyleSheet}
+            linkName="ScholarTree"
+            url="https://scholartree.ca/"
+          />
+          <SelectableInfo
+            title="ScholarshipsCanada"
             styles={selectableStyleSheet}
           />
-          <SelectableInfo title="Get Involved" styles={selectableStyleSheet} />
-          <SelectableInfo title="Be A Leader" styles={selectableStyleSheet} />
-          <SelectableInfo
-            title="Don't Spread Yourself Too Thin"
-            styles={selectableStyleSheet}
-          />
+          <SelectableInfo title="MyCampusGPS" styles={selectableStyleSheet} />
+          <SelectableInfo title="Google" styles={selectableStyleSheet} />
+          <SelectableInfo title="Youtube" styles={selectableStyleSheet} />
         </ScrollView>
       </View>
       {/* Page Footer */}
-      <BottomBar message="Be Outstanding" />
+      <BottomBar message="Placeholder" />
     </ImageBackground>
   );
 }
 
-export default GetStartedScreen;
+export default ResourcesScreen;

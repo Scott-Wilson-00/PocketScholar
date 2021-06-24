@@ -29,16 +29,19 @@ function HomeScreen(props) {
         </View>
         {/* Row 2 */}
         <View style={styles.appRow}>
-          <AppIcon image={images.tracker} screenName={screenNames.tracker} />
           <AppIcon
             image={images.activity}
             screenName={screenNames.activities}
           />
-          <AppIcon image={images.common} />
+          <AppIcon image={images.tracker} screenName={screenNames.tracker} />
+          <AppIcon image={images.common} screenName={screenNames.common} />
         </View>
         {/* Row 3 */}
         <View style={styles.appRow}>
-          <AppIcon image={images.resources} />
+          <AppIcon
+            image={images.resources}
+            screenName={screenNames.resources}
+          />
         </View>
       </View>
       {/* Page Footer */}

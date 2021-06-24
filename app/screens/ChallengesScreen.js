@@ -27,23 +27,23 @@ function ChallengesScreen(props) {
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
           <SelectableInfo
-            text="Application Burnout"
+            title="Application Burnout"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Staying Focused/Diligent"
+            title="Staying Focused/Diligent"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Discovering Your Passion"
+            title="Discovering Your Passion"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Time Management"
+            title="Time Management"
             styles={selectableStyleSheet}
           />
           <SelectableInfo
-            text="Not Being Sick At Coding"
+            title="Not Being Sick At Coding"
             styles={selectableStyleSheet}
           />
         </ScrollView>

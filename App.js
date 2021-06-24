@@ -9,6 +9,8 @@ import GetStartedScreen from "./app/screens/GetStartedScreen";
 import ChallengesScreen from "./app/screens/ChallengesScreen";
 import ScholarshipTracker from "./app/screens/ScholarshipTrackerScreen";
 import ActivityListScreen from "./app/screens/ActivityListScreen";
+import CommonQuestionsScreen from "./app/screens/CommonQuestionsScreen";
+import ResourcesScreen from "./app/screens/ResourcesScreen";
 
 const Stack = createStackNavigator();
 
@@ -37,6 +39,14 @@ export default function App() {
         <Stack.Screen
           name={screenNames.activities}
           component={ActivityListScreen}
+        />
+        <Stack.Screen
+          name={screenNames.common}
+          component={CommonQuestionsScreen}
+        />
+        <Stack.Screen
+          name={screenNames.resources}
+          component={ResourcesScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

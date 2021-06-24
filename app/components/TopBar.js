@@ -5,6 +5,31 @@ import { useNavigation } from "@react-navigation/core";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
 
+function createStyle(titleSize) {
+  return StyleSheet.create({
+    homeButton: {
+      height: 40,
+      left: 10,
+      width: 40,
+    },
+    menuButton: {
+      height: 40,
+      right: 10,
+      width: 40,
+    },
+    titleText: {
+      color: "white",
+      fontSize: titleSize,
+    },
+    topBar: {
+      alignItems: "flex-end",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      flex: 1,
+    },
+  });
+}
+
 function TopBar(props) {
   const navigation = useNavigation();
 
@@ -17,6 +42,8 @@ function TopBar(props) {
       navigation.goBack();
     };
   }
+
+  let styles = createStyle(props.titleSize);
 
   return (
     <View style={styles.topBar}>
@@ -40,39 +67,16 @@ function TopBar(props) {
   );
 }
 
-const styles = StyleSheet.create({
-  homeButton: {
-    height: 40,
-    left: 10,
-    width: 40,
-  },
-  menuButton: {
-    height: 40,
-    right: 10,
-    width: 40,
-  },
-  titleText: {
-    color: "white",
-    fontSize: 35,
-  },
-  topBar: {
-    alignItems: "flex-end",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flex: 1,
-  },
-});
-
 TopBar.propTypes = {
   titleText: PropTypes.string,
   isHome: PropTypes.bool,
-  saveScholarships: PropTypes.func,
+  titleSize: PropTypes.number,
 };
 
 TopBar.defaultProps = {
   titleText: "!!!!!!",
   isHome: false,
-  saveScholarships: null,
+  titleSize: 35,
 };
 
 export default TopBar;

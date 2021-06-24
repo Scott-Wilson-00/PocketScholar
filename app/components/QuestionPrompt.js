@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useState } from "react";
 import {
-  ImageBackground,
-  Modal,
-  Pressable,
-  Text,
   View,
-  Linking,
+  ImageBackground,
+  Text,
+  Pressable,
+  Modal,
+  ScrollView,
 } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import globalStyles from "../config/globalStyles";
 import images from "../config/images";
-import text from "../config/text";
-import PropTypes from "prop-types";
+import PromptAnswerField from "./PromptAnswerField";
 
-function Selectable(props) {
-  // Creates a bool and a function to set it
+function QuestionPrompt(props) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -37,24 +36,17 @@ function Selectable(props) {
           >
             {props.title}
           </Text>
-          {/* Text */}
           <View style={props.styles.modalTextContainer}>
-            <ScrollView>
-              <Text style={props.styles.modalText}>{props.text}</Text>
-              <Text
-                style={props.styles.link}
-                onPress={() => {
-                  try {
-                    Linking.openURL(props.url);
-                  } catch {}
-                }}
-              >
-                {props.linkName}
-              </Text>
+            <ScrollView contentContainerStyle={globalStyles.scrollView}>
+              <PromptAnswerField styles={props.styles} title={props.title} />
             </ScrollView>
           </View>
           {/* Close Modal Button */}
-          <Pressable onPress={() => setModalVisible(!modalVisible)}>
+          <Pressable
+            onPress={() => {
+              setModalVisible(!modalVisible);
+            }}
+          >
             <View style={props.styles.closeButton}>
               <Text style={props.styles.closeButtonText}>Close Selection</Text>
             </View>
@@ -78,14 +70,4 @@ function Selectable(props) {
   );
 }
 
-Selectable.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-};
-
-Selectable.defaultProps = {
-  title: "!!!!!!!",
-  text: "!!!!!!!",
-};
-
-export default Selectable;
+export default QuestionPrompt;

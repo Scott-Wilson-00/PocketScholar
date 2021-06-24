@@ -29,4 +29,17 @@ export default {
     formFieldBorder: "rgba(3,119,99,1)",
     scrollContainer: "rgba(3,119,99,0.6)",
   },
+  commonQuestionsPage: {
+    prompt: "rgba(255,140,0,1)",
+    displayText: "black",
+    scrollContainer: "rgba(235,107,29,0.8)",
+    inputContainer: "rgba(235,107,29,0.8)",
+  },
+  resourcesPage: {
+    selectable: "rgba(255,140,0,1)",
+    displayText: "black",
+    bodyBackground: "rgba(235,107,29,0.8)",
+    scrollContainer: "rgba(235,107,29,0.8)",
+    link: "rgba(13,62,249,1)",
+  },
 };
