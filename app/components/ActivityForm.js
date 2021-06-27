@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Pressable,
-  Keyboard,
-} from "react-native";
-import { Formik } from "formik";
+import { Text, View, TextInput, Pressable, Keyboard } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import colors from "../config/colors";
+import { Formik } from "formik";
 
 function ActivityForm(props) {
   // The states to be modified by the loadEntries asyncstorage function

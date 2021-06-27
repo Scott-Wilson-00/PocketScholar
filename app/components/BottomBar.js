@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     borderColor: "white",
     borderWidth: 2,
-    justifyContent: "center",
     borderRadius: 80,
     height: 50,
-    width: "80%",
     paddingHorizontal: 10,
     paddingVertical: 10,
+    justifyContent: "center",
+    width: "80%",
   },
   bottomBarContainer: {
     alignItems: "center",
@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
   },
   message: {
     color: "white",
-    fontSize: 25,
     fontFamily: "RobotoBold",
+    fontSize: 25,
   },
 });
 

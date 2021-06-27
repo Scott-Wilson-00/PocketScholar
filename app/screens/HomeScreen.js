@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 import AppIcon from "../components/AppIcon";
+import AppLoading from "expo-app-loading";
 import BottomBar from "../components/BottomBar";
-import TopBar from "../components/TopBar";
+import * as Font from "expo-font";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
-import * as Font from "expo-font";
-import AppLoading from "expo-app-loading";
+import TopBar from "../components/TopBar";
 
 const loadFonts = () =>
   Font.loadAsync({
@@ -19,6 +19,7 @@ const loadFonts = () =>
 function HomeScreen(props) {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
+  // Displays splash screen until fonts are loaded
   if (fontsLoaded) {
     return (
       <ImageBackground
@@ -77,11 +78,11 @@ function HomeScreen(props) {
 const styles = StyleSheet.create({
   appRow: {
     alignItems: "center",
+    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 20,
     marginTop: 40,
-    flex: 1,
+    padding: 20,
   },
   appContainer: {
     flex: 6,

@@ -21,6 +21,7 @@ function OptionsMenu(props) {
     >
       <View style={styles.rightView}>
         <View style={styles.modalView}>
+          {/* Options on the navigation menu */}
           <MenuOption
             name={screenNames.about}
             image={images.about}
@@ -71,6 +72,7 @@ function OptionsMenu(props) {
             }}
           />
           <View style={styles.buttonRow}>
+            {/* Close Menu Button */}
             <Pressable
               style={styles.button}
               onPress={() => props.setModalVisible(!props.modalVisible)}
@@ -79,6 +81,7 @@ function OptionsMenu(props) {
                 <Text style={styles.modalButtonText}>Close Menu</Text>
               </View>
             </Pressable>
+            {/* Home Button */}
             <Pressable
               style={styles.button}
               onPress={() => handlePress(screenNames.home)}
@@ -96,23 +99,23 @@ function OptionsMenu(props) {
 
 const styles = StyleSheet.create({
   rightView: {
-    justifyContent: "center",
     alignItems: "flex-end",
-    width: "100%",
     height: "100%",
+    width: "100%",
+    justifyContent: "center",
     right: "-7%",
   },
   modalView: {
+    alignItems: "flex-start",
     backgroundColor: "black",
-    borderTopLeftRadius: 20,
     borderBottomLeftRadius: 20,
-    borderWidth: 3,
     borderColor: "white",
+    borderWidth: 3,
+    borderTopLeftRadius: 20,
+    height: "75%",
     paddingHorizontal: 15,
     paddingVertical: 10,
-    height: "75%",
     width: "75%",
-    alignItems: "flex-start",
   },
   button: {
     borderRadius: 20,
@@ -123,14 +126,14 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     color: "black",
-    textAlign: "center",
     fontFamily: "RobotoBold",
+    textAlign: "center",
   },
   modalButton: {
     backgroundColor: "white",
-    padding: 10,
-    borderRadius: 10,
     borderWidth: 3,
+    borderRadius: 10,
+    padding: 10,
   },
 });
 

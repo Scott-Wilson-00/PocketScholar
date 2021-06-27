@@ -1,20 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   ImageBackground,
-  StyleSheet,
   View,
   ScrollView,
   Text,
   Pressable,
 } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import Activity from "../components/Activity";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import colors from "../config/colors";
-import TopBar from "../components/TopBar";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
 import StyleSheetMaker from "../config/dynamicStyles";
+import TopBar from "../components/TopBar";
 
 function ActivityListScreen(props) {
   let activityStyle = StyleSheetMaker.createListItemStyle(
@@ -25,10 +24,10 @@ function ActivityListScreen(props) {
     colors.activityListPage.scrollContainer
   );
 
-  const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [activityIDs, setActivityIDs] = useState([]);
   const componentRefs = useRef([]);
+  const scrollList = useRef();
 
   /**
    * Into local storage, saves the id of the next activity to be added
@@ -163,16 +162,7 @@ function ActivityListScreen(props) {
       {/* Bottom of the screen, containing Add Activity prompt and button  */}
       <View style={screenStyle.bottomOfScreen}>
         <View style={screenStyle.addPrompt}>
-          <Text
-            style={screenStyle.addPromptText}
-            onPress={() => {
-              AsyncStorage.multiRemove(["nextActivityID", "activityIDList"]);
-              // saveNextID(0);
-              // saveActivityIDs([]);
-            }}
-          >
-            Add Activity
-          </Text>
+          <Text style={screenStyle.addPromptText}>Add Activity</Text>
         </View>
         {/* Add activity button */}
         {/* Focus bottom of activity list */}
@@ -187,8 +177,6 @@ function ActivityListScreen(props) {
           </View>
         </Pressable>
       </View>
-
-      {/* Pressing button adds new activity, increases id value, deleting activity clears asyncstorage data */}
     </ImageBackground>
   );
 }

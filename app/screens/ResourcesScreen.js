@@ -2,12 +2,12 @@ import React from "react";
 import { View, ImageBackground, ScrollView } from "react-native";
 import BottomBar from "../components/BottomBar";
 import colors from "../config/colors";
-import SelectableInfo from "../components/SelectableInfo";
-import StyleSheetMaker from "../config/dynamicStyles";
-import TopBar from "../components/TopBar";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
+import SelectableInfo from "../components/SelectableInfo";
+import StyleSheetMaker from "../config/dynamicStyles";
+import TopBar from "../components/TopBar";
 
 function ResourcesScreen(props) {
   let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(

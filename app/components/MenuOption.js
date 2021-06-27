@@ -16,14 +16,14 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   image: {
-    width: 35,
     height: 35,
+    width: 35,
   },
   name: {
+    color: "white",
+    fontFamily: "RobotoBold",
     fontSize: 25,
     marginHorizontal: 10,
-    fontFamily: "RobotoBold",
-    color: "white",
   },
 });
 

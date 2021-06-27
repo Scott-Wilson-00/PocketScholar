@@ -6,8 +6,8 @@ export default {
   about: require("../assets/images/about.png"),
   getStarted: require("../assets/images/get_started.png"),
   challenges: require("../assets/images/challenges.png"),
-  tracker: require("../assets/images/tracker.png"),
   activity: require("../assets/images/activity.png"),
+  tracker: require("../assets/images/tracker.png"),
   common: require("../assets/images/common.png"),
   resources: require("../assets/images/resources.png"),
 };

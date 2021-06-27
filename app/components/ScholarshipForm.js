@@ -77,7 +77,7 @@ function ScholarshipForm(props) {
           essayTopic: initEssayTopic,
         }}
         // Functions to call when modal closes
-        // values Array<string> of formik textinput values
+        // values is a string array of formik textinput values
         onSubmit={(values) => {
           saveEntries(values);
           Keyboard.dismiss();

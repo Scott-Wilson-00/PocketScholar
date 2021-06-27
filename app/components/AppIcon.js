@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import { useNavigation } from "@react-navigation/core";
 

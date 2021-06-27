@@ -6,33 +6,6 @@ import images from "../config/images";
 import screenNames from "../config/screenNames";
 import OptionsMenu from "./OptionsMenu";
 
-function createStyle(titleSize, titleColor) {
-  return StyleSheet.create({
-    homeButton: {
-      height: 40,
-      left: 10,
-      width: 40,
-    },
-    menuButton: {
-      height: 40,
-      right: 10,
-      width: 40,
-    },
-    titleText: {
-      color: titleColor,
-      fontSize: titleSize,
-      fontFamily: "ChalkboyRegular",
-      maxWidth: "60%",
-    },
-    topBar: {
-      alignItems: "flex-end",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      flex: 1,
-    },
-  });
-}
-
 function TopBar(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const navigation = useNavigation();
@@ -76,6 +49,33 @@ function TopBar(props) {
       </View>
     </View>
   );
+}
+
+function createStyle(titleSize, titleColor) {
+  return StyleSheet.create({
+    topBar: {
+      alignItems: "flex-end",
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
+    homeButton: {
+      height: 40,
+      left: 10,
+      width: 40,
+    },
+    titleText: {
+      color: titleColor,
+      fontFamily: "ChalkboyRegular",
+      fontSize: titleSize,
+      maxWidth: "60%",
+    },
+    menuButton: {
+      height: 40,
+      right: 10,
+      width: 40,
+    },
+  });
 }
 
 TopBar.propTypes = {

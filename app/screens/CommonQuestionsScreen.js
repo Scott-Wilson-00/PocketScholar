@@ -5,8 +5,8 @@ import colors from "../config/colors";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
 import QuestionPrompt from "../components/QuestionPrompt";
-import StyleSheetMaker from "../config/dynamicStyles";
 import screenNames from "../config/screenNames";
+import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
 
 function CommonQuestionsScreen(props) {

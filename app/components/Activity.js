@@ -4,7 +4,6 @@ import {
   Pressable,
   Text,
   Modal,
-  StyleSheet,
   ImageBackground,
   KeyboardAvoidingView,
   Keyboard,

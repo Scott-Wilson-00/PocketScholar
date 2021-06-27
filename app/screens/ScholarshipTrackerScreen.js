@@ -8,12 +8,12 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import colors from "../config/colors";
-import Scholarship from "../components/Scholarship";
-import StyleSheetMaker from "../config/dynamicStyles";
-import TopBar from "../components/TopBar";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
+import Scholarship from "../components/Scholarship";
 import screenNames from "../config/screenNames";
+import StyleSheetMaker from "../config/dynamicStyles";
+import TopBar from "../components/TopBar";
 
 function ScholarshipTracker(props) {
   let scholarshipStyle = StyleSheetMaker.createListItemStyle(
@@ -24,10 +24,10 @@ function ScholarshipTracker(props) {
     colors.scholarshipTrackerPage.scrollContainer
   );
 
-  const scrollList = useRef();
   const [nextID, setNextID] = useState(0);
   const [scholarshipIDs, setScholarshipIDs] = useState([]);
   const componentRefs = useRef([]);
+  const scrollList = useRef();
 
   /**
    * Into local storage, saves the id of the next scholarship to be added
@@ -166,11 +166,6 @@ function ScholarshipTracker(props) {
             style={screenStyle.addPromptText}
             numberOfLines={1}
             adjustsFontSizeToFit={true}
-            onPress={() => {
-              AsyncStorage.multiRemove(["nextID", "idList"]);
-              // saveNextID(0);
-              // saveScholarshipIDs([]);
-            }}
           >
             Add Scholarship
           </Text>
@@ -188,8 +183,6 @@ function ScholarshipTracker(props) {
           </View>
         </Pressable>
       </View>
-
-      {/* Pressing button adds new scholarship, increases id value, deleting scholarship clears asyncstorage data */}
     </ImageBackground>
   );
 }

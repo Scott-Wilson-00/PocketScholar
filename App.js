@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import screenNames from "./app/config/screenNames";
-import HomeScreen from "./app/screens/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
 import AboutScreen from "./app/screens/AboutScreen";
-import GetStartedScreen from "./app/screens/GetStartedScreen";
-import ChallengesScreen from "./app/screens/ChallengesScreen";
-import ScholarshipTracker from "./app/screens/ScholarshipTrackerScreen";
 import ActivityListScreen from "./app/screens/ActivityListScreen";
+import ChallengesScreen from "./app/screens/ChallengesScreen";
 import CommonQuestionsScreen from "./app/screens/CommonQuestionsScreen";
+import GetStartedScreen from "./app/screens/GetStartedScreen";
+import HomeScreen from "./app/screens/HomeScreen";
+import ScholarshipTracker from "./app/screens/ScholarshipTrackerScreen";
+import screenNames from "./app/config/screenNames";
 import ResourcesScreen from "./app/screens/ResourcesScreen";
 
 const Stack = createStackNavigator();
@@ -52,5 +51,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({});

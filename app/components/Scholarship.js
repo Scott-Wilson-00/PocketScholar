@@ -174,7 +174,7 @@ class Scholarship extends Component {
           </Pressable>
         </Modal>
 
-        {/* Contents of the scholarship component (excluding modal)*/}
+        {/* Contents outside of modal */}
         {/* The entire scholarship can be clicked to open the modal */}
         <Pressable
           style={this.props.styles.selectable}

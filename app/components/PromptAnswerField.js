@@ -10,10 +10,18 @@ class PromptAnswerField extends Component {
     };
   }
 
+  /**
+   * Updates component state
+   * @param {String} newResponse Latest response from user
+   */
   setResponse = (newResponse) => {
     this.setState({ response: newResponse });
   };
 
+  /**
+   * Stores updated response in device's local storage
+   * @param {String} response Input saved when component unmounts
+   */
   saveResponse = async (response) => {
     try {
       if (response != null && response != undefined) {
@@ -27,6 +35,9 @@ class PromptAnswerField extends Component {
     }
   };
 
+  /**
+   * Loads response from device's local storage
+   */
   loadResponse = async () => {
     try {
       const loadedResponse = await AsyncStorage.getItem(this.props.title);
@@ -60,6 +71,7 @@ class PromptAnswerField extends Component {
         onChangeText={(text) => {
           this.setResponse(text);
         }}
+        // Ensures placeholder returns when response is deleted
         value={
           this.state.response.trim().length > 0 ? this.state.response : null
         }

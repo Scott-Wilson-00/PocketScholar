@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import images from "../config/images";
-import text from "../config/text";
 import PropTypes from "prop-types";
 
 function Selectable(props) {

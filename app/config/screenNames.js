@@ -3,8 +3,8 @@ export default {
   about: "About",
   getStarted: "Get Started",
   challenges: "Challenges",
-  tracker: "Tracker",
   activities: "Activity List",
+  tracker: "Tracker",
   common: "Common Prompts",
   resources: "Resources",
 };
