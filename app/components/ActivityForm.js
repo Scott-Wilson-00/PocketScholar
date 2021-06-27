@@ -27,11 +27,11 @@ function ActivityForm(props) {
   const saveEntries = async (entries) => {
     try {
       await AsyncStorage.multiSet([
-        ["activityName" + props.id, entries.activityName],
-        ["involvementDate" + props.id, entries.involvementDate],
-        ["commitment" + props.id, entries.commitment],
-        ["roles" + props.id, entries.roles],
-        ["awards" + props.id, entries.awards],
+        ["activityName" + props.id, entries.activityName.trim()],
+        ["involvementDate" + props.id, entries.involvementDate.trim()],
+        ["commitment" + props.id, entries.commitment.trim()],
+        ["roles" + props.id, entries.roles.trim()],
+        ["awards" + props.id, entries.awards.trim()],
       ]);
       // Defaults display name to 'New Activity' when field left empty
       props.updateListDisplayName(

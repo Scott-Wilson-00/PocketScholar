@@ -32,7 +32,7 @@ function Selectable(props) {
           {/* Title */}
           <Text
             adjustsFontSizeToFit={true}
-            numberOfLines={1}
+            numberOfLines={2}
             style={props.styles.modalTitle}
           >
             {props.title}

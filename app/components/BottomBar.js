@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   message: {
     color: "white",
     fontSize: 25,
+    fontFamily: "RobotoBold",
   },
 });
 

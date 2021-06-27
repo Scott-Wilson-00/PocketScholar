@@ -23,7 +23,11 @@ function AboutScreen(props) {
     <ImageBackground source={images.background} style={globalStyles.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
-      <TopBar titleText={screenNames.about} />
+      <TopBar
+        titleText={screenNames.about}
+        titleColor={colors.aboutPage.topBar}
+        titleSize={50}
+      />
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>

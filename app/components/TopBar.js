@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import PropTypes from "prop-types";
 import { useNavigation } from "@react-navigation/core";
 import images from "../config/images";
 import screenNames from "../config/screenNames";
+import OptionsMenu from "./OptionsMenu";
 
-function createStyle(titleSize) {
+function createStyle(titleSize, titleColor) {
   return StyleSheet.create({
     homeButton: {
       height: 40,
@@ -18,8 +19,10 @@ function createStyle(titleSize) {
       width: 40,
     },
     titleText: {
-      color: "white",
+      color: titleColor,
       fontSize: titleSize,
+      fontFamily: "ChalkboyRegular",
+      maxWidth: "60%",
     },
     topBar: {
       alignItems: "flex-end",
@@ -31,6 +34,7 @@ function createStyle(titleSize) {
 }
 
 function TopBar(props) {
+  const [modalVisible, setModalVisible] = useState(false);
   const navigation = useNavigation();
 
   if (props.isHome) {
@@ -43,26 +47,33 @@ function TopBar(props) {
     };
   }
 
-  let styles = createStyle(props.titleSize);
+  let styles = createStyle(props.titleSize, props.titleColor);
 
   return (
     <View style={styles.topBar}>
-      {/* Home Button */}
-      <Pressable onPress={handleButtonPress}>
-        <Image source={image} style={styles.homeButton} />
-      </Pressable>
-      {/* Page Title */}
-      <Text
-        adjustsFontSizeToFit={true}
-        style={styles.titleText}
-        numberOfLines={1}
-      >
-        {props.titleText}
-      </Text>
-      {/* Menu Button */}
-      <Pressable onPress={() => alert("Menu Pressed")}>
-        <Image source={images.menu} style={styles.menuButton} />
-      </Pressable>
+      <OptionsMenu
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+      />
+      {/* TopBar Contents */}
+      <View style={styles.topBar}>
+        {/* Home Button */}
+        <Pressable onPress={handleButtonPress}>
+          <Image source={image} style={styles.homeButton} />
+        </Pressable>
+        {/* Page Title */}
+        <Text
+          adjustsFontSizeToFit={true}
+          style={styles.titleText}
+          numberOfLines={1}
+        >
+          {props.titleText}
+        </Text>
+        {/* Menu Button */}
+        <Pressable onPress={() => setModalVisible(true)}>
+          <Image source={images.menu} style={styles.menuButton} />
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -71,12 +82,14 @@ TopBar.propTypes = {
   titleText: PropTypes.string,
   isHome: PropTypes.bool,
   titleSize: PropTypes.number,
+  titleColor: PropTypes.string,
 };
 
 TopBar.defaultProps = {
   titleText: "!!!!!!",
   isHome: false,
-  titleSize: 35,
+  titleSize: 45,
+  titleColor: "white",
 };
 
 export default TopBar;

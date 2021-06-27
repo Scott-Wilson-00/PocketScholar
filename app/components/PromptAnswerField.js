@@ -18,12 +18,8 @@ class PromptAnswerField extends Component {
     try {
       if (response != null && response != undefined) {
         let trimmedResponse = response.trim();
-        // console.log("Response accepted: " + trimmedResponse);
-        // console.log("Untrimmed: " + response.length);
-        // console.log("  Trimmed: " + trimmedResponse.length);
         await AsyncStorage.setItem(this.props.title, trimmedResponse);
       } else {
-        console.log("Response was empty");
         await AsyncStorage.setItem(this.props.title, "");
       }
     } catch (error) {
@@ -34,11 +30,10 @@ class PromptAnswerField extends Component {
   loadResponse = async () => {
     try {
       const loadedResponse = await AsyncStorage.getItem(this.props.title);
-      console.log("Loaded: " + loadedResponse);
       if (loadedResponse !== null) {
         this.setResponse(
           loadedResponse.length > 0
-            ? loadedResponse + "\n\n\n\n\n\n\n\n\n"
+            ? loadedResponse + "\n".repeat(20)
             : loadedResponse
         );
       } else {

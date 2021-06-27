@@ -21,11 +21,11 @@ function CommonQuestionsScreen(props) {
 
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
-      <TopBar titleText={screenNames.common} titleSize={30} />
+      <TopBar titleText={screenNames.common} titleSize={35} />
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
           <QuestionPrompt
-            title="What Apps Have You Made?"
+            title="What Apps Have You Made In this Circumstance?"
             styles={promptStyle}
           />
         </ScrollView>

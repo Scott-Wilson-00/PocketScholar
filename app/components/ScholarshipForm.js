@@ -20,11 +20,11 @@ function ScholarshipForm(props) {
   const saveEntries = async (entries) => {
     try {
       await AsyncStorage.multiSet([
-        ["name" + props.id, entries.name],
-        ["deadline" + props.id, entries.deadline],
-        ["value" + props.id, entries.value],
-        ["criteria" + props.id, entries.criteria],
-        ["essayTopic" + props.id, entries.essayTopic],
+        ["name" + props.id, entries.name.trim()],
+        ["deadline" + props.id, entries.deadline.trim()],
+        ["value" + props.id, entries.value.trim()],
+        ["criteria" + props.id, entries.criteria.trim()],
+        ["essayTopic" + props.id, entries.essayTopic.trim()],
       ]);
       // Defaults display name to 'New Scholarship' when field left empty
       props.updateListDisplayName(

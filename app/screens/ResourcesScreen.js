@@ -23,7 +23,7 @@ function ResourcesScreen(props) {
     <ImageBackground source={images.background} style={globalStyles.background}>
       {/* MAIN CONTENT */}
       {/* Page Header */}
-      <TopBar titleText={screenNames.about} />
+      <TopBar titleText={screenNames.resources} />
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>

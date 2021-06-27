@@ -9,6 +9,7 @@ export default class StyleSheetMaker {
         alignItems: "center",
         justifyContent: "center",
         marginTop: 10,
+        marginBottom: 40,
         backgroundColor: "black",
         height: 60,
         width: 180,
@@ -19,10 +20,12 @@ export default class StyleSheetMaker {
       closeButtonText: {
         color: "white",
         fontSize: 20,
+        fontFamily: "RobotoBold",
       },
       modalBackground: {
         alignItems: "center",
         flex: 1,
+        justifyContent: "flex-end",
       },
       modalText: {
         fontSize: 22,
@@ -35,7 +38,7 @@ export default class StyleSheetMaker {
         borderColor: "black",
         borderWidth: 3,
         borderRadius: 10,
-        height: "70%",
+        height: "65%",
         justifyContent: "flex-start",
         paddingTop: 20,
         width: "90%",
@@ -48,10 +51,12 @@ export default class StyleSheetMaker {
         textAlign: "left",
       },
       modalTitle: {
-        fontSize: 30,
+        fontSize: 40,
         paddingTop: 50,
         paddingHorizontal: "5%",
         color: "white",
+        fontFamily: "ChalkboyRegular",
+        textAlign: "center",
       },
       selectable: {
         alignItems: "center",
@@ -71,6 +76,7 @@ export default class StyleSheetMaker {
         fontSize: 25,
         marginHorizontal: 10,
         textAlign: "center",
+        fontFamily: "FjallaOneRegular",
       },
     });
   }
@@ -97,16 +103,18 @@ export default class StyleSheetMaker {
       },
       editTitle: {
         color: "white",
-        fontSize: 30,
+        fontSize: 50,
         flex: 0.4,
         paddingBottom: "20%",
         textAlign: "center",
+        fontFamily: "ChalkboyRegular",
       },
       name: {
         color: displayTextColor,
         fontSize: 22,
         paddingHorizontal: "5%",
         flex: 10,
+        fontFamily: "FjallaOneRegular",
       },
       removeButton: {
         color: displayTextColor,
@@ -165,7 +173,7 @@ export default class StyleSheetMaker {
       addButtonText: {
         color: "white",
         fontSize: 40,
-        paddingBottom: 5,
+        fontFamily: "RobotoBold",
       },
       addPrompt: {
         borderColor: "white",
@@ -173,12 +181,13 @@ export default class StyleSheetMaker {
         borderWidth: 3,
         backgroundColor: "black",
         justifyContent: "center",
-        paddingHorizontal: 8,
+        paddingHorizontal: 12,
         paddingVertical: 8,
       },
       addPromptText: {
         color: "white",
         fontSize: 30,
+        fontFamily: "RobotoBold",
       },
     });
   }
@@ -216,6 +225,7 @@ export default class StyleSheetMaker {
       updateButtonText: {
         color: "white",
         fontSize: 20,
+        fontFamily: "RobotoBold",
       },
     });
   }
@@ -239,10 +249,12 @@ export default class StyleSheetMaker {
         fontSize: 25,
         marginHorizontal: 10,
         textAlign: "center",
+        fontFamily: "FjallaOneRegular",
       },
       modalBackground: {
         alignItems: "center",
         flex: 1,
+        justifyContent: "flex-end",
       },
       modalTextContainer: {
         alignItems: "flex-start",
@@ -250,7 +262,7 @@ export default class StyleSheetMaker {
         borderColor: "black",
         borderWidth: 3,
         borderRadius: 10,
-        height: "70%",
+        height: "65%",
         justifyContent: "flex-start",
         paddingTop: 20,
         width: "90%",
@@ -262,11 +274,14 @@ export default class StyleSheetMaker {
         paddingTop: 50,
         paddingHorizontal: "5%",
         color: "white",
+        textAlign: "center",
+        fontFamily: "ChalkboyRegular",
       },
       closeButton: {
         alignItems: "center",
         justifyContent: "center",
         marginTop: 10,
+        marginBottom: 40,
         backgroundColor: "black",
         height: 60,
         width: 180,
@@ -277,6 +292,7 @@ export default class StyleSheetMaker {
       closeButtonText: {
         color: "white",
         fontSize: 20,
+        fontFamily: "RobotoBold",
       },
       input: {
         fontSize: 20,
