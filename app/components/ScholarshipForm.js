@@ -94,6 +94,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("name")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Scholarship Name"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.name}
             />
@@ -102,14 +103,16 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("deadline")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Deadline"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.deadline}
             />
             <TextInput
               maxLength={25}
               onChangeText={formikProps.handleChange("value")}
-              onFocus={() => props.setKeyboardCanShift(false)}
+              onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Value"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.value}
             />
@@ -119,6 +122,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("criteria")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Criteria"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.criteria}
             />
@@ -127,6 +131,7 @@ function ScholarshipForm(props) {
               onChangeText={formikProps.handleChange("essayTopic")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Essay Topic"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.essayTopic}
             />

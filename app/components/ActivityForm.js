@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, TextInput, Pressable, Keyboard } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Formik } from "formik";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../config/colors";
 
 function ActivityForm(props) {
   // The states to be modified by the loadEntries asyncstorage function
@@ -97,6 +98,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("activityName")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Name of activity/organization"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.activityName}
             />
@@ -105,6 +107,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("involvementDate")}
               onFocus={() => props.setKeyboardCanShift(false)}
               placeholder="Period of Involvement"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.involvementDate}
             />
@@ -112,8 +115,9 @@ function ActivityForm(props) {
               maxLength={30}
               selectTextOnFocus={true}
               onChangeText={formikProps.handleChange("commitment")}
-              onFocus={() => props.setKeyboardCanShift(false)}
+              onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Commitment: Hours/Week"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.commitment}
             />
@@ -123,6 +127,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("roles")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Key Roles/Responsibilities"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.roles}
             />
@@ -131,6 +136,7 @@ function ActivityForm(props) {
               onChangeText={formikProps.handleChange("awards")}
               onFocus={() => props.setKeyboardCanShift(true)}
               placeholder="Awards / Achievements"
+              placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.awards}
             />

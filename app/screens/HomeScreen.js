@@ -80,9 +80,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     marginTop: 40,
-    padding: 20,
+    paddingVertical: 20,
   },
   appContainer: {
     flex: 6,

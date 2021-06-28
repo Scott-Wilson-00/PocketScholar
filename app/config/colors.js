@@ -22,12 +22,14 @@ export default {
     displayText: "black",
     formFieldBorder: "rgba(255,215,114,1)",
     scrollContainer: "rgba(204,172,91,0.7)",
+    placeholder: "rgba(150,150,150,1)",
   },
   activityListPage: {
     selectable: "rgba(29,160,137,1)",
     displayText: "white",
     formFieldBorder: "rgba(3,119,99,1)",
     scrollContainer: "rgba(40,107,96,0.6)",
+    placeholder: "rgba(150,150,150,1)",
   },
   commonQuestionsPage: {
     prompt: "rgba(254,125,197,1)",

@@ -57,11 +57,10 @@ function createStyle(titleSize, titleColor) {
       alignItems: "flex-end",
       flex: 1,
       flexDirection: "row",
-      justifyContent: "space-between",
+      justifyContent: "space-evenly",
     },
     homeButton: {
       height: 40,
-      left: 10,
       width: 40,
     },
     titleText: {
@@ -72,7 +71,6 @@ function createStyle(titleSize, titleColor) {
     },
     menuButton: {
       height: 40,
-      right: 10,
       width: 40,
     },
   });
