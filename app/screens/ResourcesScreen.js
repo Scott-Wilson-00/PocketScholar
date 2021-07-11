@@ -43,7 +43,7 @@ function ResourcesScreen(props) {
         </ScrollView>
       </View>
       {/* Page Footer */}
-      <BottomBar message="Placeholder" />
+      <BottomBar message="Don't Stop Here!" />
     </ImageBackground>
   );
 }

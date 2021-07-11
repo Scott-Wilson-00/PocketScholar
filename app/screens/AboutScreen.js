@@ -7,6 +7,7 @@ import images from "../config/images";
 import screenNames from "../config/screenNames";
 import SelectableInfo from "../components/SelectableInfo";
 import StyleSheetMaker from "../config/dynamicStyles";
+import text from "../config/text";
 import TopBar from "../components/TopBar";
 
 function AboutScreen(props) {
@@ -33,10 +34,16 @@ function AboutScreen(props) {
         <ScrollView style={globalStyles.scrollView}>
           <SelectableInfo
             title="What Is PocketScholar?"
+            text={text.aboutText.whatIsPs}
             styles={selectableStyleSheet}
           />
           <SelectableInfo
             title="Why Does PocketScholar Exist?"
+            text={text.aboutText.whyDoesPsExist}
+            styles={selectableStyleSheet}
+          />
+          <SelectableInfo
+            title="Why Does PocketScholar Exist? Pt. 2"
             styles={selectableStyleSheet}
           />
           <SelectableInfo

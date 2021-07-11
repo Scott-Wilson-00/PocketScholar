@@ -29,8 +29,10 @@ export default class StyleSheetMaker {
       },
       modalText: {
         color: "black",
-        fontSize: 22,
-        textAlign: "left",
+        fontFamily: "WorkSans",
+        fontSize: 18,
+        lineHeight: 20,
+        textAlign: "center",
       },
       modalTextContainer: {
         alignItems: "flex-start",

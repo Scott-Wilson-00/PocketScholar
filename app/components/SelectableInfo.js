@@ -40,6 +40,7 @@ function Selectable(props) {
           <View style={props.styles.modalTextContainer}>
             <ScrollView>
               <Text style={props.styles.modalText}>{props.text}</Text>
+              {/* Links, pass list of links and link names, for loop of respective indexes */}
               <Text
                 style={props.styles.link}
                 onPress={() => {

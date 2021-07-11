@@ -1,5 +1,15 @@
 export default {
   aboutText: {
-    whatIsPS: "",
+    whatIsPs:
+      "PocketScholar is a volunteer project to help students look further into their future and invite them to start thinking about how they’ll fund their post-secondary education. By getting a head start and making a sensible investment of time and effort, you can kickstart your financial future to lead a more constructive, less stressful, more generous, and overall happier life! \n\n" +
+      "PocketScholar isn’t a tool to help you find scholarships, because there are already plenty to choose from. What it CAN be however, is a catalyst for exceptional growth in every area of your life. I don’t hope to help you win scholarships, I want you to become the type of person who wins scholarships! \n\n" +
+      "By laying out the groundwork for success, shifting your perspective, and posing demanding questions that will really make you think, PocketScholar will lay the path to success far beyond solely winning scholarships. Now the only question is, will you walk it?",
+    whyDoesPsExist:
+      "The drive behind PocketScholar’s development is very multifaceted, though the primary motivation stems from two main sources.\n\n" +
+      "I entered high school as a respectable, yet not quite outstanding student. I had always been studious when it came to academics and took my athletics very seriously. I felt successful, my parents never complained about my grades, nor my teachers about my behaviour, yet by personal preference I remained confined to the ecosystem of friends, role models, and opportunities that I had slowly formed throughout childhood. \n\n" +
+      "Completing my work in a timely manner, and returning from practices or games, I felt as if I were busy every day of the week. Though one thing I always found time for were video games, which at the time of writing, I have a very mixed relationship with. While the time you enjoy is not wasted, there is something everyone needs to decide for themselves. How much do you value your time now versus your time thirty years from now?\n\n" +
+      "After two seemingly short years of grades nine and ten, I slowly came to the realization that by sticking to the familiar I had missed out on an amazing window of time to explore what else the world has to offer. Although I had many positive experiences during this time, I frequently look back and remind myself that with the limited time you have, comfort is a luxury and you should strive for nothing less than excellence.\n\n" +
+      "Through my personal experience, I hope to ensure that anyone who interacts with PocketScholar will internalize my lessons as their own and take the opportunity to use their time effectively, engage with their community, learn valuable skills, take initiative, and be a leader as soon as you finish this extremely long run on sentence that any english teacher couldn’t imagine reading without throwing up because of its unbearable length " +
+      "which might be the result of my tendency to exhaust all possible examples in an extensive list of very relevant items, none of which I am willing to exclude because of the importance of each and every item in the journey to becoming a well-rounded, knowledgeable, stoic, and charismatic individual who knows how to end a sentence concisely. Ok starting now.",
   },
 };

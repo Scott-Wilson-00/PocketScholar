@@ -14,6 +14,7 @@ const loadFonts = () =>
     ChalkboyRegular: require("../assets/fonts/ChalkboyRegular.otf"),
     FjallaOneRegular: require("../assets/fonts/FjallaOne-Regular.ttf"),
     RobotoBold: require("../assets/fonts/Roboto-Bold.ttf"),
+    WorkSans: require("../assets/fonts/WorkSans-VariableFont_wght.ttf"),
   });
 
 function HomeScreen(props) {
