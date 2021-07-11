@@ -10,6 +10,7 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 import images from "../config/images";
 import PropTypes from "prop-types";
+import StyledText from "react-native-styled-text";
 
 function Selectable(props) {
   // Creates a bool and a function to set it
@@ -39,7 +40,9 @@ function Selectable(props) {
           {/* Text */}
           <View style={props.styles.modalTextContainer}>
             <ScrollView>
-              <Text style={props.styles.modalText}>{props.text}</Text>
+              <StyledText style={props.styles.modalText}>
+                {props.text}
+              </StyledText>
               {/* Links, pass list of links and link names, for loop of respective indexes */}
               <Text
                 style={props.styles.link}

@@ -1,7 +1,7 @@
 export default {
   aboutText: {
     whatIsPs:
-      "PocketScholar is a volunteer project to help students look further into their future and invite them to start thinking about how they’ll fund their post-secondary education. By getting a head start and making a sensible investment of time and effort, you can kickstart your financial future to lead a more constructive, less stressful, more generous, and overall happier life! \n\n" +
+      "<b>PocketScholar</b> is a <i>volunteer</i> project to help students look further into their future and invite them to start thinking about how they’ll fund their post-secondary education. By getting a head start and making a sensible investment of time and effort, you can kickstart your financial future to lead a more constructive, less stressful, more generous, and overall happier life! \n\n" +
       "PocketScholar isn’t a tool to help you find scholarships, because there are already plenty to choose from. What it CAN be however, is a catalyst for exceptional growth in every area of your life. I don’t hope to help you win scholarships, I want you to become the type of person who wins scholarships! \n\n" +
       "By laying out the groundwork for success, shifting your perspective, and posing demanding questions that will really make you think, PocketScholar will lay the path to success far beyond solely winning scholarships. Now the only question is, will you walk it?",
     whyDoesPsExist:
