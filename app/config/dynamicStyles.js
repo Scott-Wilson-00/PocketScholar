@@ -31,7 +31,7 @@ export default class StyleSheetMaker {
         color: "black",
         fontSize: 18,
         lineHeight: 20,
-        textAlign: "center",
+        textAlign: "left",
       },
       modalTextContainer: {
         alignItems: "flex-start",
