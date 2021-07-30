@@ -121,7 +121,7 @@ function ScholarshipForm(props) {
               textAlignVertical="center"
               onChangeText={formikProps.handleChange("criteria")}
               onFocus={() => props.setKeyboardCanShift(true)}
-              placeholder="Criteria"
+              placeholder="Criteria/Special Requirements"
               placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.criteria}
@@ -130,7 +130,7 @@ function ScholarshipForm(props) {
               maxLength={40}
               onChangeText={formikProps.handleChange("essayTopic")}
               onFocus={() => props.setKeyboardCanShift(true)}
-              placeholder="Essay Topic"
+              placeholder="Essay Topic?"
               placeholderTextColor={colors.scholarshipTrackerPage.placeholder}
               style={props.styles.input}
               value={formikProps.values.essayTopic}
