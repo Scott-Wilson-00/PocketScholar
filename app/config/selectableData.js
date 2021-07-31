@@ -47,11 +47,11 @@ export default {
       text: text.getStartedText.applyEquation3,
     },
     {
-      title: "Breaking Down Equation 3. The Ingredients",
+      title: "Equation 3, The Ingredients",
       text: text.getStartedText.breakdownIngredients,
     },
     {
-      title: "Breaking Down Equation 3. The Results",
+      title: "Equation 3, The Results",
       text: text.getStartedText.breakdownResults,
     },
     { title: "Applying Equation 3", text: text.getStartedText.applyEquation3 },
