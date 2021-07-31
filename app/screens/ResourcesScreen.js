@@ -8,6 +8,7 @@ import screenNames from "../config/screenNames";
 import SelectableInfo from "../components/SelectableInfo";
 import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
+import selectableData from "../config/selectableData";
 
 function ResourcesScreen(props) {
   let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(
@@ -18,7 +19,6 @@ function ResourcesScreen(props) {
   let screenStyle = StyleSheetMaker.createInfoScreenStyle(
     colors.resourcesPage.scrollContainer
   );
-
   return (
     <ImageBackground source={images.background} style={globalStyles.background}>
       {/* MAIN CONTENT */}
@@ -27,19 +27,21 @@ function ResourcesScreen(props) {
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <SelectableInfo
-            title="ScholarTree"
-            styles={selectableStyleSheet}
-            linkName="ScholarTree"
-            url="https://scholartree.ca/"
-          />
-          <SelectableInfo
-            title="ScholarshipsCanada"
-            styles={selectableStyleSheet}
-          />
-          <SelectableInfo title="MyCampusGPS" styles={selectableStyleSheet} />
-          <SelectableInfo title="Google" styles={selectableStyleSheet} />
-          <SelectableInfo title="Youtube" styles={selectableStyleSheet} />
+          {selectableData.resourcesSelectable.map(
+            (data,
+            (index) => {
+              return (
+                <SelectableInfo
+                  title={data.title}
+                  text={data.text}
+                  styles={selectableStyleSheet}
+                  linkName={data.linkName}
+                  url={data.url}
+                  key={index}
+                />
+              );
+            })
+          )}
         </ScrollView>
       </View>
       {/* Page Footer */}

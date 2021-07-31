@@ -8,6 +8,7 @@ import screenNames from "../config/screenNames";
 import SelectableInfo from "../components/SelectableInfo";
 import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
+import selectableData from "../config/selectableData";
 
 function ChallengesScreen(props) {
   let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(
@@ -18,6 +19,7 @@ function ChallengesScreen(props) {
   let screenStyle = StyleSheetMaker.createInfoScreenStyle(
     colors.challengesPage.scrollContainer
   );
+
   return (
     <ImageBackground style={globalStyles.background} source={images.background}>
       {/* MAIN CONTENT */}
@@ -26,26 +28,16 @@ function ChallengesScreen(props) {
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <SelectableInfo
-            title="Application Burnout"
-            styles={selectableStyleSheet}
-          />
-          <SelectableInfo
-            title="Staying Focused/Diligent"
-            styles={selectableStyleSheet}
-          />
-          <SelectableInfo
-            title="Discovering Your Passion"
-            styles={selectableStyleSheet}
-          />
-          <SelectableInfo
-            title="Time Management"
-            styles={selectableStyleSheet}
-          />
-          <SelectableInfo
-            title="Not Being Sick At Coding"
-            styles={selectableStyleSheet}
-          />
+          {selectableData.challengesSelectable.map((data, index) => {
+            return (
+              <SelectableInfo
+                title={data.title}
+                text={data.text}
+                styles={selectableStyleSheet}
+                key={index}
+              />
+            );
+          })}
         </ScrollView>
       </View>
       {/* Page Footer */}
