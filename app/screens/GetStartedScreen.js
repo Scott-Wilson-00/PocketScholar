@@ -8,7 +8,7 @@ import screenNames from "../config/screenNames";
 import SelectableInfo from "../components/SelectableInfo";
 import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
-import text from "../config/text";
+import selectableData from "../config/selectableData";
 
 function GetStartedScreen(props) {
   let selectableStyleSheet = StyleSheetMaker.createSelectableStyle(
@@ -20,43 +20,6 @@ function GetStartedScreen(props) {
     colors.getStartedPage.scrollContainer
   );
 
-  const selectables = [
-    {
-      title: "What is a Scholarship?",
-      text: text.getStartedText.whatsAScholarship,
-    },
-    {
-      title: "Invest In Yourself First!",
-      text: text.getStartedText.investInYourself,
-    },
-    {
-      title: "The Investment Equations",
-      text: text.getStartedText.investmentEquations,
-    },
-    {
-      title: "Investment Equations 1 and 2",
-      text: text.getStartedText.equations1and2,
-    },
-    {
-      title: "Investment Equation 3",
-      text: text.getStartedText.applyEquation3,
-    },
-    {
-      title: "Breaking Down Equation 3 - The Ingredients",
-      text: text.getStartedText.breakdownIngredients,
-    },
-    {
-      title: "Breaking Down Equation 3 - The Results",
-      text: text.getStartedText.breakdownResults,
-    },
-    { title: "Applying Equation 3", text: text.getStartedText.applyEquation3 },
-    { title: "Fashion Your Passion", text: text.getStartedText.fashionPassion },
-    { title: "Hide and Seek", text: text.getStartedText.hideAndSeek },
-    { title: "Break Out", text: text.getStartedText.breakOut },
-    { title: "The Patient", text: text.getStartedText.youThePatient },
-    { title: "Recap", text: text.getStartedText.recap },
-  ];
-
   return (
     <ImageBackground style={globalStyles.background} source={images.background}>
       {/* MAIN CONTENT */}
@@ -65,7 +28,7 @@ function GetStartedScreen(props) {
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          {selectables.map((data, index) => {
+          {selectableData.getStartedSelectable.map((data, index) => {
             return (
               <SelectableInfo
                 title={data.title}

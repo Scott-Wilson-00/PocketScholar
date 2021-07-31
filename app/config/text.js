@@ -233,5 +233,160 @@ export default {
       "Enjoy yourself every step of the way, but never get comfortable by keeping yourself constrained to the familiar. Make yourself uncomfortable by starting off slow or doing something terrifying.\n\n" +
       "Get out there and actually do it! Prepare to win scholarships and use that advantage wisely!\n\n",
   },
+  challengesText: {
+    timeMgmt:
+      "Time management is becoming a skill that is getting increasingly harder to be good at. Our world is driven by information and temptation, all of which want to seize your attention and hold it for as long as possible. To put yourself ahead of the crowd, you need to be able to filter out distractions which sap your time and attention, without offering any real outcome.\n\n" +
+      "Two main principles that I personally use to manage my time are as follows:\n\n" +
+      "<b>1. Focus on being effective, not just efficient.</b>\n" +
+      "The first principle takes a page out of Tim Ferriss’ “The 4-Hour Workweek”, and it has been a staple of my life for some time now.\n\n" +
+      "<b>Effectiveness: The degree to which something is successful in producing a desired result</b>\n" +
+      "<b>Efficiency: Accomplishment of or ability to accomplish a job with a minimum expenditure of time and effort</b>\n\n" +
+      "Ferriss considers a door-to-door salesperson to be efficient, he says, “[salespeople are] refined and excellent at selling door-to-door without wasting time - but utterly ineffective”. They do their jobs very efficiently, but fail to accomplish their goal (selling the largest amount of product possible) effectively.\n\n" +
+      "A much more effective approach would be online advertising. Reaching a larger customer base would likely allow the salespeople to move more product. This is both more effective, as it creates better results, and more efficient, as it doesn’t take them all day to make individual sales.\n\n" +
+      "It’s not about doing things well. It’s about doing the <i>right</i> things well. This extends to you too. For example, you could spend hours creating pristine and comprehensive notes from a math textbook, but without solving the problems yourself, you’ll have had no practice for when it counts. You’re great at taking notes, but the notes don’t get you where you want to be.\n\n" +
+      "By cutting down on unimportant tasks, you can focus on what will advance you towards real results and your goals. This will save you lots of time from the work that is unnecessary.\n\n" +
+      "<b>2. Maintain a ratio of productivity to enjoyment.</b>\n" +
+      "This principle fits the generally accepted notion of time management.\n\n" +
+      "You should be aware of how much of your time is spent for pure enjoyment, and how much of it is spent doing activities that satisfy investment equation #3. Ask yourself: what is the ratio of time I invest in myself versus the time I spend for pure enjoyment?\n\n" +
+      "There is no ‘right’ answer to this question, but the next step is to determine what ratio you should aim for. If you currently spend an average of 50% of 16 waking hours investing in yourself, that means you spend 8 hours a day without any attempt to make yourself better.\n\n" +
+      "That isn’t meant to scare you, but it should put the amount of time you spend on frivolous activities into perspective. If you believe that you would benefit from increasing the time spent investing in yourself, start by swapping 5% of your pure enjoyment time for ‘investment time’.\n\n" +
+      "There are endless ways to invest in yourself that will fill that gap: read non-fiction books; exercise or play sports; pursue hobbies that challenge you; volunteer; or anything else that will improve your skills, character, or give you valuable experiences. As you get accustomed to that increase in ‘investment time’, if necessary, you can continue to swap 5% until you reach a desirable ratio.\n\n" +
+      "Keep in mind that this is not a battle between good and evil, nor does it need to be a zero-sum game. Relaxation, entertainment and the like are equally as important as self investment, but they’re simply required in much smaller doses than you think. In addition, taking away from pure enjoyment doesn’t mean reducing your overall enjoyment. It means you should partake in fulfilling activities you enjoy which help to improve yourself instead of doing other enjoyable things like scrolling <i>mindlessly</i> on your phone.\n\n" +
+      "Time management is not as difficult as it seems. All it asks of you is to identify which of the things you do are necessary for personal growth, and which are not. Then all it takes is a bit of your own will!\n\n",
+    burnout:
+      "Burnout is a prolonged state in which you might feel strained, drained or unproductive as a result of being overworked and exhausted, mentally, physically, or emotionally. For some people it’s just as easy to work too hard as it is for others to work too little, both of which are equally detrimental in their own ways.\n\n" +
+      "For those of you who relate to the former, there are a few main reasons as to why you might feel burnt out:\n\n" +
+      "1. Taking on too many responsibilities, making life feel routinely chaotic and high-pressure\n\n" +
+      "2. Over-achieving or perfectionism; believing that you need to increase performance at all costs (even your well-being)\n\n" +
+      "3. Not allowing enough time for recreation or socialization with those who you share supportive relationships with\n\n" +
+      "Generally, a <i>long term</i> work-life imbalance can lead to burnout.\n\n" +
+      "On the other hand, there’s still a distinct difference between burnout and ‘a busy month’ for example. While you’re very busy, it’s normal to feel anxious or weary, but in contrast, burnout is characterized by disengagement from the work you typically enjoy, lack of motivation and malaise, or ultimately, a sense of hopelessness.\n\n" +
+      "Fortunately there are methods to prevent and recover from burnout so that you can get back to both productivity and happiness:\n\n" +
+      "<b>Stay alert.</b> Symptoms of burnout can accumulate without you realizing it until it’s begun to take its toll.\n\n" +
+      "<b>Talk.</b> Increase time spent with those whose presence you enjoy: family, friends, co-workers, new friendships etc. Limit your time with people that provide a negative influence.\n\n" +
+      "<b>Say no.</b> Define boundaries for yourself when it comes to others occupying your time. If you struggle with this, practice by saying no to someone’s request for your time at least once a week. Going out with friends or ‘getting on the game’ are good things to practice saying no to once in a while.\n\n" +
+      "<b>Prioritize yourself.</b> Focusing on your health can be like pushing a reset button. Avoid excess fats and sugars that can creep into your diet when overwhelmed. Exercise for at least 20 minutes daily. Even push ups or burpees in the margins of time in between tasks can easily fill your quota. Stop working at a reasonable hour to ensure you get around 8 hours of sleep. Your tasks will always be there in the morning.n\n" +
+      "The ability to keep an equilibrium between intense work and health is one that can be developed just like any other. Being consistent with the habits above will not only help fend off burnout, but will also give you the opportunity to be a much more well rounded person outside of your work. If you are feeling burnt out, seek extra support and find even more ways to bounce back online.\n\n",
+    impostor:
+      "A majority of people will experience Impostor Syndrome at some point in their life, likely in their education or career. You might doubt your skills, experiences, and accomplishments because you feel like you aren’t good enough. You might not think you deserve to be in the position you’re in. You feel like a fraud.\n\n" +
+      "<i>‘Everyone else seems to understand… I must not be smart enough. They’re faster and stronger than me, there’s no way I can compete. I can never win scholarships when there are so many other accomplished students out there. I don’t deserve to be here, either it’s a mistake or I must have gotten lucky.’</i>\n\n" +
+      "<b>Wrong. Wrong. Wrong. Aaaaand you guessed it… wrong.</b>\n\n" +
+      "1. There is no single benchmark for intelligence, and everyone learns at their own pace. You likely excel in other fields or have unique experiences that you use to make original connections between subjects. The more you practice learning, the shorter it will take for new concepts to ‘click’.\n\n" +
+      "2. Work smarter not harder. What personal strengths can you take advantage of? Put yourself in the position to benefit the most from your strengths and suffer the least from your weaknesses. Someone being better than you in a single area doesn’t make them better than you as a person.\n\n" +
+      "3. You don’t decide if you win a scholarship, so why would you decide that you can’t win it? By investing in yourself and proving your accomplishments by making an impact on others, you have already fulfilled the requirements almost all scholarships are looking for! Not applying for a scholarship is equal to being the least desirable member of the application pool, so what have you got to lose?\n\n" +
+      "4.You shouldn’t doubt the positive feedback of others. If people thought you weren’t meant to be somewhere, someone would have already told you, and they’d probably still be wrong! If you’ve been accepted to a competitive program, qualified for a high-caliber sports team or done anything equally as incredible, don’t dismiss other people’s judgement! Someone made a good choice based on what they saw in you, so be proud of your accomplishments and keep pushing!\n\n" +
+      "At the time of writing, I recently put myself in a situation where my own feelings of inadequacy could have torn me to shreds. If you feel these types of thoughts beginning to invade your mind, you have to close the floodgates and look at your situation objectively. For me, that meant realizing that yes, some of the people around me might be more experienced, knowledgeable, and skilled.\n\n" +
+      "But who said that was a bad thing?\n\n" +
+      "Instead of letting me get the best of myself, I took it as a chance to learn from people who knew more than me and improved as a result. By noticing your own doubtful thoughts and removing them before they become a forest fire, you can instead use them to fuel your own growth!\n\n" +
+      "Not understanding or being the best at something doesn’t make you a fool or a fraud, it means you’re a student. In a time of your life where the payoff of success is exceptional and the price of failure is next to non-existent, you shouldn’t dwell on the comparisons you make between you and others. Comparison only leads to despair or ego, both equally unhealthy. Perform the best you can and keep your head held high.\n\n",
+    dabbling:
+      "By following the steps outlined on the Get Started Page, you will have identified what fields and which activities appeal to you, and will have also started engaging in them to invest in yourself. Well done! Hopefully there are a couple with which you’re already fascinated and frequently enjoy.\n\n" +
+      "In the event that you find an abundance of interests, you might actually realize that you have too many! This can be both a blessing and a curse.\n\n" +
+      "It’s amazing to have a variety of interests, because you have the option to pursue as many as time allows! In this scenario, over your lifetime you have the chance to be known as a polymath - someone with a wide range of varying knowledge. As a jack of all trades, you may have the ability to connect seemingly distant subjects to solve problems with solutions that are unobservable to a specialist.\n\n" +
+      "One of the most prominent examples of polymathy is Aristotle. Among the greatest philosophers in history, he drew from an expansive range of subject matter to create his works, including: <i>physics, biology, zoology, metaphysics, logic, ethics, aesthetics, poetry, theatre, music, rhetoric, psychology, linguistics, economics, politics, meteorology, and geology.</i> Say that five times fast!\n\n" +
+      "Having lots of interests is great! But be careful, there is a dark side that can easily mislead you.\n\n" +
+      "<b>Dabbling</b>, a form of pseudo-polymathy, can be dangerous to the long term development of your interests. Unlike a polymath, the jack of all trades, ‘the dabbler’ is <b>a jack of no trades</b>.\n\n" +
+      "Dabblers may have a wide pool of experience, but the depth is ankle deep. Similar to an addict, the dabbler pursues what seems to be a real interest and savours the ‘honeymoon phase’. Unfortunately, once the activity becomes less novel, say after a month, they drop it and move on to the next short-sighted endeavour, therefore having <i>dabbled</i> in the field.\n\n" +
+      "Their motivation follows the path of a yo-yo, spiking at the point when a new interest is discovered, then later plummeting until the next new activity is found. This results in an extremely surface level experience with every new thing they take on. Without any valuable skills that take time to develop, nor strong relationships formed through long term commitments, the dabbler will find themselves unaccomplished and unfulfilled.\n\n" +
+      "Should you identify yourself as a dabbler, you need to reevaluate your habits. The process isn’t  exceedingly difficult, but it will require some mental fortitude.\n\n" +
+      "First, ask yourself: For what reasons do I often lose the motivation to commit to the activities I’m interested in? Then: What made me want to pursue [x] activity in the first place? Finally: Have I really lost interest in the activity, or is there something else that is causing my motivation to dwindle?\n\n" +
+      "One of the biggest reasons for dabbling is a reluctance to face adversity. As you begin an activity, you will have a good time just by doing it. Though eventually, you will probably either hit a roadblock or a skill curve that will prove difficult to overcome, resulting in a sharp decline in interest. At this point, instead of quitting to find the next shiny activity, dig deep and push through.\n\n" +
+      "The more you seek challenges, the more you will come to enjoy them. That’s because the reward for persisting and eventually surmounting those hurdles is exponentially more fulfilling than seeking out the next easy undertaking. To continue, through the struggle you’ll form a strong bond with that activity and will in turn have a deeper understanding of the subject and a greater interest in learning more.\n\n" +
+      "Again, it will demand mental strength to commit to activities and stop dabbling for good, but once you get your hands dirty and stick with a selection of activities, you’ll end up enjoying yourself more, taking your skills to higher levels, and conditioning yourself to obliterate challenges that come your way.\n\n",
+    opportunities:
+      "If you want to do more to invest in yourself but opportunities never seem to come your way, you’re absolutely right, they usually don’t! Similar to how your passions will never be handed to you, the worthwhile opportunities require some initiative to find.\n\n" +
+      "The best ways to find the right investment activities for you are: reaching out to people you know, doing your own research, or creating your own opportunities!\n\n" +
+      "Connecting with the people around you is by far the easiest way to start finding opportunities you can participate in. What clubs does your school host that interest you? Does anyone in your family work somewhere you can volunteer at? Are your friends and peers engaged in extracurriculars that could challenge you or benefit those around you?\n\n" +
+      "Research online to find programs, organizations, or other opportunities outside of your current sphere. This is a great way to build new relationships outside of school and other extracurriculars - you’ll definitely expose yourself to unfamiliar and exciting things!\n\n" +
+      "If you are truly struggling to find opportunities or aren’t inclined to use the previous methods, make your own! There are plenty of ways you can take initiative by using a bit of resourcefulness and creativity to make a positive impact for yourself and others. What needs in the immediate world around you do you notice that could be fulfilled? Maybe you’d want to organize a fundraiser for an animal shelter, design a robot that could automate something in your life, or as previously mentioned, start a club! The possibilities are endless!\n\n" +
+      "If you have found opportunities but you’re still waiting on the ‘go ahead’ on whether you should pursue them, you’re essentially playing tennis against a wall. You can always ask life whether it’s the right time, but life is going to bounce that question right back to you.\n\n" +
+      "There is never a perfect time for anything. From my experience, the moment you start <b>is</b> the right time to start, so the only reason you’ll be kicking yourself is if you never take the initiative to seek out and pursue those opportunities in the first place.\n\n",
+  },
+  resourcesText: {
+    searchEngines:
+      "As you continue to build your potential and begin your last few years of highschool, you’ll likely want to get prepared to actually win some scholarships!\n\n" +
+      "Using scholarship search engines is one of the best methods to research scholarships that you have a high likelihood of obtaining. By providing information about yourself and your specified criteria, you can easily navigate across expansive databases of scholarships to locate those that are the most applicable to your achievements and experiences.\n\n" +
+      "On top of all that, these websites are incredibly useful to learn more about scholarships in general. You can find tips and tricks, answers to FAQs, and many articles which provide insights into the most effective ways to find and apply to scholarships!\n\n" +
+      "On your search for scholarships, there are also alternative places to look in addition to scholarship search engines:\n\n" +
+      "-Contacting local businesses\n-Scouting company websites\n-Your or your parents’ employers\n-Community associations\n-Professional organizations\n\n" +
+      "Make sure to carefully analyze the requirements of a scholarship to make sure you are eligible. Good luck!\n\n",
+    scholarshipsCanada:
+      "Scholarships Canada is an extremely reliable and highly recommended resource for locating scholarships that align with your interests. Here you can find plenty of helpful information and tips for scholarship preparation and application.\n\n",
+    scholartree:
+      "ScholarTree’s search engine will present you with scholarships based on your interests and personal preferences. On top of catering to you, there are many specific categories to search by!\n\n",
+    yconic:
+      "Yconic is an extensive site with plenty of valuable tools to learn about post-secondary institutions, get financial advice, and read about some of the most successful scholars of recent years.\n\n",
+    studentAwards:
+      "StudentAwards.com is Yconic’s scholarship database where you can search by various criteria such as school, program, location, deadline, and even difficulty.\n\n",
+    studentAid:
+      "The Government of Canada offers an abundance of pages which cover topics from student financial aid and budgeting all the way to studying abroad or education for new immigrants.\n\n",
+    books:
+      "When was the last time you’ve read a book that wasn’t assigned by a teacher?\n\n" +
+      "The habit of reading non-fiction content is an amazing one to have for so many reasons. I’m not going to preach to you about the importance of analytical reading, but it is a skill you need to develop just like any other.\n\n" +
+      "Reading is one of the most effective tools for self-learning, which thereby makes it a great way to invest in yourself! Take it from Bill Gates, for him reading isn’t a pastime, he says reading is ‘<i>absolutely</i>’ essential for success. Gates reads about <b>50 books</b> a year, or almost one book a week!\n\n" +
+      "That being said, I love to read myself, and to help you feel the same way I have compiled a brief list of the most influential books I have read to date. The books are ordered alphabetically to potentially eliminate any biases that might crop when listing them.\n\n" +
+      "Of course these are just suggestions. If none pique your interest, go ahead and find what appeals to you! At this stage, just building the habit of reading challenging non-fiction content will undoubtedly provide benefits in more areas than you might think.\n\n" +
+      "If you still need convincing, start by reading the article attached below. It might just change your mind!\n\n" +
+      "P.S. If you don’t have the patience to digest the article, you’ve just proved to yourself that it’s time to do some more reading!\n\n",
+    amusingToDeath:
+      "Written in 1985, the author Neil Postman demonstrates how our media of communication shape what and how information is circulated throughout society. In a pre-internet era, the book’s arguments revolve around television, though they extend and apply just as much (if not more) to today’s information landscape.\n\n" +
+      "An amazing book to open your eyes to why our education, politics, religion, and almost everything else exist the way they do today.\n\n",
+    atomicHabits:
+      "<i>Atomic Habits</i> is one of the symbols of investing in yourself. Atomic [little things] habits [that you do on a regular basis] are the building blocks of any incredible achievement.\n\n" +
+      "To quote the book: “You do not rise to the level of your goals. You fall to the level of your systems”. In conjunction with the blueprint laid out by PocketScholar, you can use <i>Atomic Habits’</i> systems to exponentially increase your efficiency and your potential.\n\n",
+    gettingToYes:
+      "From getting the top bunk to approving a billion dollar merger, negotiation is a fundamental skill that you unknowingly use every day. <i>Getting to Yes</i> shows you how negotiation doesn’t always have to be a tug-of-war or a zero sum game. \n\n" +
+      "Instead of each party getting a small slice of the pie, why not just make it bigger?\n\n",
+    readABook:
+      "We don’t know how to read. Well at least the way we should be. <i>How To Read a Book</i> presents 4 levels of reading in increasing order of complexity: Elementary, Inspectional, Analytical, and Syntopical. I would bet a substantial amount of money that most of us aren’t much past the elementary stage.\n\n" +
+      "You probably think that’s an exaggeration, <i>it’s not. How To Read a Book</i> will teach you how to read a book… <b>properly!</b>\n\n",
+    influence:
+      "The title sounds sinister, but in reality, <i>Influence</i> enlightens you to the persuasion tactics used by others. By recognizing when those around you are employing the 6 weapons of influence, you are able to combat them with logical decisions grounded in sound reasoning.\n\n" +
+      "Of course these methods are free for your own use as well. Just keep in mind that you have the capacity to make many more positive impacts through their use rather than using them with malicious intent.\n\n",
+    range:
+      "In today’s world we’re pushed more than ever to intensify our education into an ever narrowing field of specialization. <i>Range</i> explores many case studies of frequent failers who have traversed dozens of careers, only to become some of the highest performing, well known individuals in their current roles.\n\n" +
+      "Their success was fostered by a vast array of experiences that specialists would likely never have. Is it time to specialize, or generalize?\n\n",
+    richDadPoorDad:
+      "Over his childhood, Robert Kiyosaki learned invaluable lessons from his two father figures, one highly educated, one not so much. One was lower middle class, the other, again, not so much. Kiyosaki passes his wisdom on to you in an engaging and easy to digest book that is bound to change your views on financial literacy.\n\n" +
+      "<i>Rich Dad Poor Dad</i> was my true introduction to business and personal finance. This book will teach you the true definition of wealth, and what it means to be financially educated. From minimum wage workers to corporate CEOs, everyone can make their money work for them.\n\n",
+    workweek:
+      "<i>The 4-Hour Workweek</i> is a hand-crafted guide to escape the toil of the arbitrary 9-5 and become a part of the ‘New Rich’. It’s not a cult, nor do you need to be a millionaire to join. <i>The 4-Hour Workweek</i> is a step-by-step handbook on turning Monday into something to look forward to.\n\n" +
+      "While the times have changed and a significant amount of resources Tim Ferriss provides are outdated, his life-altering principles will continue to ring true for decades to come.\n\n",
+    barefootInvestor:
+      "Scott Pape is an incredibly witty author. The only thing that outshine his coarse jokes and engaging storytelling is his rock-solid financial advice. From the moment you earn your first dollar to the moment you retire, <i>The Barefoot Investor’s</i> teachings will be at your side to ensure you’ll never have a sleepless night due to your finances.\n\n" +
+      "Originating from Australia, you’ll be required to do a bit of cultural and procedural translation, but after that, your knowledge can be applied anywhere in the world.\n\n",
+    bitcoinStandard:
+      "It took me about 8 hours before I started truly reading about cryptocurrency in <i>The Bitcoin Standard</i>. Over those 480 minutes the book took me from bartering, to shared ownership of large boulders, to exchanging precious metals, to centralized fiat currency and more.\n\n" +
+      "<i>The Bitcoin Standard</i> taught me what factors influence the soundness of a medium of exchange and how that applies to modern day economics. After finishing the book, I guarantee you that you will be more knowledgeable about Bitcoin than at least 99% of the population.\n\n",
+    rideOfALifetime:
+      "Robert Iger shares his story from childhood to the end of his 15 years as the sixth CEO of The Walt Disney Company. Having over 200,000 employees look up to you is no small task, and the lessons learned throughout his journey reflect the scope of his responsibilities.\n\n" +
+      "To summarize the book in one sentence: a leader’s business isn’t their product, it’s their people.\n\n",
+    velvetRope:
+      "While fame and power might allow you to walk the Red Carpet, <b>money</b. gets you on the ‘right’ side of the Velvet Rope. Beyond VIP tours, premium plane tickets, and other next to harmless luxuries, the well-intended pursuit of profit is seeping into more sinister domains.\n\n" +
+      "When money decides who gets healthcare and who dies, or what children get access to adequate education, in first world countries it is a question of morality more than economics whether the quest for high margins should corrode the foundation of our modern civilization.\n\n",
+    thinkingFastSlow:
+      "<i>Thinking Fast and Slow</i> asks the user to take a dive into their subconscious and realize that we don’t have as much free will as we might expect . This book explores the cognitive heuristics (mental shortcuts) and biases of the human mind and how they can affect our decisions without us giving it a second thought.\n\n" +
+      "<i>Disclaimer!</i> This book might be gruesomely tedious for a majority of readers. Daniel Kahneman delves into painstaking detail that would not make for a pleasant experience if you’re not accustomed to arduous reading.\n\n",
+    additionalResources:
+      "PocketScholar is an amazing start, but it’s nowhere near the end!\n\n" +
+      "What are some more ways I can invest in myself? How can I make the most of my money when I win a scholarship? What are the next steps as I advance into the professional world?\n\n" +
+      "The following resources can be used as stepping stones towards your own self-learning! Don’t stop with what’s provided here, continue to learn every day about what will put you ahead of the pack!\n\n",
+    inspiration:
+      "Some of these activities may not be available within your geographical region, however with 100s to choose from, this list is sure to spark some inspiration!\n\n",
+    compoundInterest:
+      "Compound interest is one of the greatest financial tools you have while you’re young. With it, it’s possible to make an exponentially larger amount of money without lifting a finger!\n\n" +
+      "Note that compound interests work both ways, meaning a $50,000 student loan could end up costing you north of $100,000!\n\n" +
+      "How is that possible? Learn for yourself!\n\n",
+    financialToolkit:
+      "To quote the government of Canada, the financial toolkit is “a comprehensive learning program that provides basic information and tools to help [you] manage [your] personal finances and gain the confidence they need to make better financial decisions”.\n\n" +
+      "It is recommended to read <i>Rich Dad Poor Dad</i> (found on the Resources page) in conjunction with the toolkit. Combined, you’ll be on your way to becoming a financial powerhouse. Not to mention, you’ll probably be able to teach your parents a thing or two!\n\n",
+    LinkedIn:
+      "LinkedIn is a professional social networking platform used by millions of people around the world. Getting yourself up and running on LinkedIn will definitely help you stand out when applying for jobs. With all your self-investment activities, you’re sure to have a comprehensive profile!\n\n",
+    sources: "Articles referenced within PocketScholar.\n\n",
+    trendsStudentDebt:
+      "A thorough analysis of Canadian student-debt published by Statistics Canada.\n\n",
+    studentDebtorAnalysis:
+      "This study explores the demographics of the student debt crisis and constructs profiles of the average Canadian student-debtor.\n\n",
+  },
 };
 // "\n\n" +
