@@ -8,6 +8,7 @@ import QuestionPrompt from "../components/QuestionPrompt";
 import screenNames from "../config/screenNames";
 import StyleSheetMaker from "../config/dynamicStyles";
 import TopBar from "../components/TopBar";
+import selectableData from "../config/selectableData";
 
 function CommonQuestionsScreen(props) {
   let promptStyle = StyleSheetMaker.createPromptStyle(
@@ -24,10 +25,15 @@ function CommonQuestionsScreen(props) {
       <TopBar titleText={screenNames.common} titleSize={35} />
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          <QuestionPrompt
-            title="What Apps Have You Made In this Circumstance?"
-            styles={promptStyle}
-          />
+          {selectableData.promptSelectable.map((question, index) => {
+            return (
+              <QuestionPrompt
+                title={question}
+                styles={promptStyle}
+                key={index}
+              />
+            );
+          })}
         </ScrollView>
       </View>
       <BottomBar message="Get Thinking" />

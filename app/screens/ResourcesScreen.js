@@ -27,21 +27,18 @@ function ResourcesScreen(props) {
       {/* Surrounds the list of pages */}
       <View style={screenStyle.scrollContainer}>
         <ScrollView style={globalStyles.scrollView}>
-          {selectableData.resourcesSelectable.map(
-            (data,
-            (index) => {
-              return (
-                <SelectableInfo
-                  title={data.title}
-                  text={data.text}
-                  styles={selectableStyleSheet}
-                  linkName={data.linkName}
-                  url={data.url}
-                  key={index}
-                />
-              );
-            })
-          )}
+          {selectableData.resourcesSelectable.map((data, index) => {
+            return (
+              <SelectableInfo
+                title={data.title}
+                text={data.text}
+                styles={selectableStyleSheet}
+                linkName={data.linkName}
+                url={data.url}
+                key={index}
+              />
+            );
+          })}
         </ScrollView>
       </View>
       {/* Page Footer */}

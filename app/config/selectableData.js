@@ -1,3 +1,5 @@
+import text from "./text";
+
 export default {
   aboutSelectable: [
     { title: "What Is PocketScholar?", text: text.aboutText.whatIsPs },
@@ -21,7 +23,7 @@ export default {
     { title: "Scholarship Tracker", text: text.aboutText.tracker },
     { title: "Prompts Page", text: text.aboutText.promptsPage },
     { title: "Resources Page", text: text.aboutText.resourcesPage },
-    { title: "Developer's Notes", text: text.aboutText.notes },
+    { title: "Developer Notes", text: text.aboutText.notes },
   ],
   getStartedSelectable: [
     {
@@ -45,11 +47,11 @@ export default {
       text: text.getStartedText.applyEquation3,
     },
     {
-      title: "Breaking Down Equation 3 - The Ingredients",
+      title: "Breaking Down Equation 3. The Ingredients",
       text: text.getStartedText.breakdownIngredients,
     },
     {
-      title: "Breaking Down Equation 3 - The Results",
+      title: "Breaking Down Equation 3. The Results",
       text: text.getStartedText.breakdownResults,
     },
     { title: "Applying Equation 3", text: text.getStartedText.applyEquation3 },
@@ -69,9 +71,22 @@ export default {
       text: text.challengesText.opportunities,
     },
   ],
+  promptSelectable: [
+    "Describe the impact of your greatest volunteer undertaking. What inspired you to do it?",
+    "Illustrate your top three achievements.",
+    "Talk about a time you left your comfort zone. What happened and what did you learn?",
+    "What obstacles have you faced in leadership positions? How did you overcome them?",
+    "Describe your favorite lesson learned from a leadership experience? How did you learn it?",
+    "What is your greatest strength? Give an example of a time it benefitted you.",
+    "What is your greatest weakness? What do you do to regulate it?",
+    "Who has been an important role model for you?",
+    "On what occasion have you taken the initiative to fulfill a need at your school or in your community?",
+    "Tell the story of a mistake you’ve made. What were the consequences and what did you learn?",
+    "Where do you see yourself in 10 years?",
+  ],
   resourcesSelectable: [
     {
-      title: "-> Scholarship Search Engines",
+      title: "1. Scholarship Search Engines",
       text: text.resourcesText.searchEngines,
     },
     {
@@ -105,7 +120,7 @@ export default {
       linkName: "Student Aid and Education Planning",
     },
     {
-      title: "-> Book Recommendations",
+      title: "2. Book Recommendations",
       text: text.resourcesText.books,
       url: "https://www.ascd.org/el/articles/too-dumb-for-complex-texts",
       linkName: "Too Dumb for Complex Texts?",
@@ -135,13 +150,13 @@ export default {
       linkName: "How To Read a Book - Goodreads",
     },
     {
-      title: "Influence (The Psychology of Persuasion)",
+      title: "Influence, The Psychology of Persuasion",
       text: text.resourcesText.influence,
       url: "https://www.goodreads.com/book/show/28815.Influence?ac=1&from_search=true&qid=LpIIie73Ic&rank=2",
       linkName: "Influence - Goodreads",
     },
     {
-      title: "Range (Why Generalists Triumph in a Specialized World)",
+      title: "Range, Why Generalists Triumph in a Specialized World",
       text: text.resourcesText.range,
       url: "https://www.goodreads.com/book/show/41795733-range?ac=1&from_search=true&qid=nyzSjTHscv&rank=1",
       linkName: "Range - Goodreads",
@@ -153,7 +168,7 @@ export default {
       linkName: "Rich Dad Poor Dad - Goodreads",
     },
     {
-      title: "The 4-Hour Workweek",
+      title: "The 4 Hour Workweek",
       text: text.resourcesText.workweek,
       url: "https://www.goodreads.com/book/show/368593.The_4_Hour_Workweek?ac=1&from_search=true&qid=Lr9VEfaoOk&rank=1",
       linkName: "The 4-Hour Workweek - Goodreads",
@@ -189,7 +204,7 @@ export default {
       linkName: "Thinking Fast and Slow - Goodreads",
     },
     {
-      title: "-> Additional Resources",
+      title: "3. Additional Resources",
       text: text.resourcesText.additionalResources,
     },
     {
@@ -216,7 +231,7 @@ export default {
       url: "https://www.linkedin.com/pulse/7-benefits-using-linkedin-sarah-rycraft/",
       linkName: "Benefits of LinkedIn",
     },
-    { title: "-> Sources", text: text.resourcesText.sources },
+    { title: "4. Sources", text: text.resourcesText.sources },
     {
       title: "Trends in Student Debt",
       text: text.resourcesText.trendsStudentDebt,

@@ -46,10 +46,10 @@ export default {
       "<i>Key Roles/Responsibilities:</i> What are you responsible for in the activity and how does that impact others? (eg: Event Coordinator: organized a food drive for homeless shelters in order to reduce the environmental impact of food waste)\n\n" +
       "<i>Awards / Achievements:</i> What have you accomplished in your role? Have you won any awards? Think of what that says about your character. (eg: Initiated over 400 contributions to food drives, eliminating over 60kg of food wastage)\n\n" +
       "By keeping a record of your involvement with your community, there is quite a bit of information that you can extrapolate from the data. Here are some examples of questions to ask yourself:\n\n" +
-      "<b>Specific to each activity:<b/>\n" +
-      "-> What was the end goal of this activity? Were there any lasting results?\n-> What skills or lessons did I learn while participating in this activity?\n-> What roles/responsibilities did I take on which challenged me? How did I grow from them?\n-> What do my accomplishments and awards say about my character?\n\n" +
-      "<b>Big Picture Questions:<b/>\n" +
-      "-> Do I often pursue leadership roles? If not, why?\n-> Am I committed to any activities or do I bounce from one to another without real investment?\n-> Am I doing things that I am passionate about?\n-> How much of my time is spent productively? (Learning, improving, providing value, helping others)\n\n" +
+      "<b>Specific to each activity:</b>\n" +
+      "-> What was the end goal of this activity? Were there any lasting results?\n\n-> What skills or lessons did I learn while participating in this activity?\n\n-> What roles/responsibilities did I take on which challenged me? How did I grow from them?\n\n-> What do my accomplishments and awards say about my character?\n\n" +
+      "<b>Big Picture Questions:</b>\n" +
+      "-> Do I often pursue leadership roles? If not, why?\n\n-> Am I committed to any activities or do I bounce from one to another without real investment?\n\n-> Am I doing things that I am passionate about?\n\n-> How much of my time is spent productively? (Learning, improving, providing value, helping others)\n\n" +
       "From just a few simple questions, you can reveal a very large amount about who you are and your motivations. If you are unsatisfied with your answers, don’t run, hide, or worry! Once you make the simple decision to improve yourself and once you get the ball rolling, you’ll find how fulfilling it is to be pleased with your answers!\n\n",
     tracker:
       "Since inspiring you to win scholarships is the principal objective of PocketScholar, a scholarship tracker is pretty much a requirement! Using PocketScholar’s Resources page alongside your own research, it should be relatively easy to load the tracker full of scholarships relevant to your interests and circumstances. *None of the following examples are in any way related*\n\n" +
@@ -127,40 +127,40 @@ export default {
       "In real life, analyzing your own activities of interest using this equation will help you get a better sense of what you gain from the activities, and whether they are worth your thought, time, and effort. The objective is to determine whether an activity is worthy of being used to invest in yourself.\n\n",
     breakdownIngredients:
       "<i>Thought + Effort + Time --> Skills + Character + Wisdom<i>\n\n" +
-      "<b>Example: starting a club<b>\n\n" +
+      "<b>Example: starting a club</b>\n\n" +
       "<u><b>Thought</b></u>\n" +
       "You might have noticed that there is an arrow instead of an equals sign in the equation. That’s no mistake. It signifies that <b>the equation can only move in one direction.</b> Evidently, once you spend time and effort, there’s no getting it back. That’s why thought is so important! Before moving, you should always make sure you’re about to go in the right direction.\n\n" +
       "<b>When starting a club, your initial thoughts might look like this:</b>\n" +
-      "-> What need does this club fulfill / Who does it help?\n-> How many others would be interested and willing to join?\n-> What would club meetings and activities look like?n-> What resources do I need?n-> How should I promote the club?n-> And many more…\n\n" +
+      "-> What need does this club fulfill / Who does it help?\n\n-> How many others would be interested and willing to join?\n\n-> What would club meetings and activities look like?\n\n-> What resources do I need?\n\n-> How should I promote the club?\n\n-> And many more…\n\n" +
       "While thought is important, don't let it be an excuse to procrastinate and not put in the effort. Don’t set and forget your plans either! Habitually review and reassess your actions to align yourself back with your goals.\n\n" +
       "<u><b>Effort</b></u>\n" +
       "Effort is what really gets you places! Now that you have a trajectory, it’s time to give it all you’ve got. Even if your venture is somehow unsuccessful, rest assured that you will have gained valuable abilities by simply doing the work. You have nothing to lose and much to gain!\n\n" +
       "Be sure to challenge yourself from time to time, because a healthy amount of struggle is one of the greatest ways to heighten learning.\n\n" +
       "Forming a club takes quite a bit of effort. Assembling other leaders, planning activities, writing promo material and conducting meetings are just a few of duties you might encounter. Each of these promotes different abilities, and together, supply each type of benefit outlined in equation #3.\n\n" +
       "<b>What you might ask yourself about your effort:</b>\n" +
-      "-> Is my club promotional material attractive and informative?\n-> Is the content of my meetings engaging and useful?\n-> Am I leading the meetings with enthusiasm and energy?\n\n" +
+      "-> Is my club promotional material attractive and informative?\n\n-> Is the content of my meetings engaging and useful?\n\n-> Am I leading the meetings with enthusiasm and energy?\n\n" +
       "<u><b>Time</b></u>\n" +
       "What’s the point of all your thinking and effort if it only lasts for hours, days or weeks? Every <i>skill</i> takes time to develop, you can’t alter your <i>personality</i> in an instant, and the more you <i>experience</i>, the more you’ll learn. It might not purely be about how much time you invest either - the consistency at which you invest it matters just as much.\n\n" +
       "Likewise, there is no point in forming a club just to have one meeting!\n\n" +
       "<b>Ask yourself questions like these:</b>\n" +
-      "-> Am I spending an adequate amount of time preparing for club meetings?\n-> How frequent should meetings be to create a positive impact on myself and others?\n\n" +
+      "-> Am I spending an adequate amount of time preparing for club meetings?\n\n-> How frequent should meetings be to create a positive impact on myself and others?\n\n" +
       "Once you have invested the necessary thought, effort, and time into your endeavour, you’re going to start seeing the fruits of your labour. Progress will seem slow and steady at first, but as your list of self-investment activities lengthens, your new abilities will compound and assist you in gaining even more!\n\n",
 
     breakdownResults:
       "<i>Thought + Effort + Time --> Skills + Character + Wisdom<i>\n\n" +
-      "<b>Example: starting a club<b>\n\n" +
+      "<b>Example: starting a club</b>\n\n" +
       "<u><b>Skills:</b></u>\n" +
       "The work you do in your activity will have a direct correlation to what skills you get out of it. If you have certain skills in mind, you should try to choose an activity which will push you to expand upon those which you would like to develop or improve upon.\n\n" +
       "<b>Important skills you’ll likely develop/improve when starting a club:</b>\n" +
-      "-> Leadership and group management\n-> Public Speaking\n->Time Management\n->Creative Thinking\n\n" +
+      "-> Leadership and group management\n\n-> Public Speaking\n\n->Time Management\n\n->Creative Thinking\n\n" +
       "<u><b>Character</b></u>\n" +
       "How you conduct yourself, how you treat others, and how you face adversity are equally, if not more important than your specific technical abilities. What character traits have you acquired/improved while engaging in the activity?\n\n" +
-      "<b>Improvements to your character that may occur when starting a club:</b>n" +
-      "-> ‘Since starting my club, I’ve felt more ,<u>confident</u> to share my ideas with others’\n-> ‘After having a dispute about the topic of the next meeting, I realized that I should become more <u>open-minded</u> to the opinions of others.’ \n->‘After the last meeting’s flop, I did some <u>retrospective thinking</u> and made necessary changes. Everyone loved today’s meeting!’\n\n" +
+      "<b>Improvements to your character that may occur when starting a club:</b>\n" +
+      "-> 'Since starting my club, I’ve felt more ,<u>confident</u> to share my ideas with others'\n\n-> 'After having a dispute about the topic of the next meeting, I realized that I should become more <u>open-minded</u> to the opinions of others.' \n\n->'After the last meeting’s flop, I did some <u>retrospective thinking</u> and made necessary changes. Everyone loved today’s meeting!'\n\n" +
       "<u><b>Wisdom</b></u>\n" +
       "Despite what people might say, you can have wisdom at any age, so long as you have the experience to back it up. The key is to apply that knowledge in the future. Avoiding past mistakes, preventing new ones, and using the lessons you’ve learned to your advantage will go a long way. Capitalize on the experiences created by investing in yourself!\n\n" +
       "<b>For example, running a club might teach you that:</b>\n" +
-      "-> Taking feedback and criticism graciously is very important. You can use it as an opportunity to better yourself and your work.\n-> You can’t please everyone, so just do the best you can. Understanding that not everyone will agree with you or support you is healthy and will eliminate unproductive stress.\n\n" +
+      "-> Taking feedback and criticism graciously is very important. You can use it as an opportunity to better yourself and your work.\n\n-> You can’t please everyone, so just do the best you can. Understanding that not everyone will agree with you or support you is healthy and will eliminate unproductive stress.\n\n" +
       "With the equation fully dissected, you can take it and apply it to any activity of your choosing. If the activity is worthy of being considered self-investment, the results that you see in yourself will be directly proportional to the quality and amount of thought, effort, and time that you put into it!\n\n",
     applyEquation3:
       "You can easily and frequently practice applying Equation #3 by referring back to PocketScholar. Take a look at your <b>Activity List</b> and work each activity into the equation.\n\n" +
@@ -183,7 +183,7 @@ export default {
       "As months... years pass, you gradually explore the depth of the subject, then before you know it you’ll have formed an intense fascination with what could now be considered your passion!\n\n" +
       "A passion is usually shaped little by little, and will sneak under the radar as it continues to grow within you. You’ll never be sure when you’ll be introduced to one of your passions because many people don’t realize it’s there until it has become a significant part of their life.\n\n" +
       "One thing <i>is</i> for sure though: Your passions will never be handed to you. Despite what my younger self thought, your passions won’t settle into your lap while you stick to your same routines day in and day out. You have to hunt them down like a kindergartener playing hide and seek. Weird analogy... but you’ll just have to hear me out!\n\n" +
-      "<b>Self-Check:</b>n" +
+      "<b>Self-Check:</b>\n" +
       "- Do I already think I have passions? What makes them so fascinating to me? What activities do I participate in which relate to that subject?\n\n",
 
     hideAndSeek:
@@ -222,11 +222,11 @@ export default {
       "Scholarships are investments made in an individual, based on their potential to make an impact in the future. Financial aid is granted to those who display their potential through the undertakings they have engaged in.\n\n" +
       "Build your potential by participating in activities of your choosing that increase what you have to offer to those around you. This can be visualized by three basic equations:\n\n" +
       "<u><b>Equation 1</b></u>\n" +
-      "<b>Skills + Character + Wisdom = Potential</b>\n\n" +
+      "<u>Skills</u> + <u>Character</u> + <u>Wisdom</u> = <u>Potential</u>\n\n" +
       "<u><b>Equation 2</b></u>\n" +
-      "<b>Potential</b> + Impact = Achievement\n\n" +
+      "<u>Potential</u> + Impact = Achievement\n\n" +
       "<u><b>Equation 3</b></u>\n" +
-      "Thought + Effort + Time -> <b>Skills + Character + Wisdom</b>\n\n" +
+      "Thought + Effort + Time -> <u>Skills</u> + <u>Character</u> + <u>Wisdom</u>\n\n" +
       "Think about how about how an activity would fit the criteria of equation #3 to determine whether it is worthy of being used to invest in yourself.\n\n" +
       "Your passion is unlikely to be discovered in a single moment of enlightenment. Rather, it is slowly developed over time, which demands more work, but will contribute to a much greater payoff in the long run.\n\n" +
       "Take initiative to identify what interests you, then pursue it. Don’t stop the moment you encounter difficulty or boredom, persevere until you fully grasp what it has to offer. Only then will you be equipped to decide whether to continue or discard the endeavour.\n\n" +
@@ -237,15 +237,15 @@ export default {
     timeMgmt:
       "Time management is becoming a skill that is getting increasingly harder to be good at. Our world is driven by information and temptation, all of which want to seize your attention and hold it for as long as possible. To put yourself ahead of the crowd, you need to be able to filter out distractions which sap your time and attention, without offering any real outcome.\n\n" +
       "Two main principles that I personally use to manage my time are as follows:\n\n" +
-      "<b>1. Focus on being effective, not just efficient.</b>\n" +
+      "<b>1. Focus on being effective, not just efficient.</b>\n\n" +
       "The first principle takes a page out of Tim Ferriss’ “The 4-Hour Workweek”, and it has been a staple of my life for some time now.\n\n" +
-      "<b>Effectiveness: The degree to which something is successful in producing a desired result</b>\n" +
-      "<b>Efficiency: Accomplishment of or ability to accomplish a job with a minimum expenditure of time and effort</b>\n\n" +
+      "<b><u>Effectiveness:</u> The degree to which something is successful in producing a desired result</b>\n\n" +
+      "<b><u>Efficiency:</u> Accomplishment of or ability to accomplish a job with a minimum expenditure of time and effort</b>\n\n" +
       "Ferriss considers a door-to-door salesperson to be efficient, he says, “[salespeople are] refined and excellent at selling door-to-door without wasting time - but utterly ineffective”. They do their jobs very efficiently, but fail to accomplish their goal (selling the largest amount of product possible) effectively.\n\n" +
       "A much more effective approach would be online advertising. Reaching a larger customer base would likely allow the salespeople to move more product. This is both more effective, as it creates better results, and more efficient, as it doesn’t take them all day to make individual sales.\n\n" +
       "It’s not about doing things well. It’s about doing the <i>right</i> things well. This extends to you too. For example, you could spend hours creating pristine and comprehensive notes from a math textbook, but without solving the problems yourself, you’ll have had no practice for when it counts. You’re great at taking notes, but the notes don’t get you where you want to be.\n\n" +
       "By cutting down on unimportant tasks, you can focus on what will advance you towards real results and your goals. This will save you lots of time from the work that is unnecessary.\n\n" +
-      "<b>2. Maintain a ratio of productivity to enjoyment.</b>\n" +
+      "<b>2. Maintain a ratio of productivity to enjoyment.</b>\n\n" +
       "This principle fits the generally accepted notion of time management.\n\n" +
       "You should be aware of how much of your time is spent for pure enjoyment, and how much of it is spent doing activities that satisfy investment equation #3. Ask yourself: what is the ratio of time I invest in myself versus the time I spend for pure enjoyment?\n\n" +
       "There is no ‘right’ answer to this question, but the next step is to determine what ratio you should aim for. If you currently spend an average of 50% of 16 waking hours investing in yourself, that means you spend 8 hours a day without any attempt to make yourself better.\n\n" +
@@ -256,25 +256,25 @@ export default {
     burnout:
       "Burnout is a prolonged state in which you might feel strained, drained or unproductive as a result of being overworked and exhausted, mentally, physically, or emotionally. For some people it’s just as easy to work too hard as it is for others to work too little, both of which are equally detrimental in their own ways.\n\n" +
       "For those of you who relate to the former, there are a few main reasons as to why you might feel burnt out:\n\n" +
-      "1. Taking on too many responsibilities, making life feel routinely chaotic and high-pressure\n\n" +
-      "2. Over-achieving or perfectionism; believing that you need to increase performance at all costs (even your well-being)\n\n" +
-      "3. Not allowing enough time for recreation or socialization with those who you share supportive relationships with\n\n" +
+      "<b>1.</b> Taking on too many responsibilities, making life feel routinely chaotic and high-pressure\n\n" +
+      "<b>2.</b> Over-achieving or perfectionism; believing that you need to increase performance at all costs (even your well-being)\n\n" +
+      "<b>3.</b> Not allowing enough time for recreation or socialization with those who you share supportive relationships with\n\n" +
       "Generally, a <i>long term</i> work-life imbalance can lead to burnout.\n\n" +
       "On the other hand, there’s still a distinct difference between burnout and ‘a busy month’ for example. While you’re very busy, it’s normal to feel anxious or weary, but in contrast, burnout is characterized by disengagement from the work you typically enjoy, lack of motivation and malaise, or ultimately, a sense of hopelessness.\n\n" +
       "Fortunately there are methods to prevent and recover from burnout so that you can get back to both productivity and happiness:\n\n" +
       "<b>Stay alert.</b> Symptoms of burnout can accumulate without you realizing it until it’s begun to take its toll.\n\n" +
       "<b>Talk.</b> Increase time spent with those whose presence you enjoy: family, friends, co-workers, new friendships etc. Limit your time with people that provide a negative influence.\n\n" +
       "<b>Say no.</b> Define boundaries for yourself when it comes to others occupying your time. If you struggle with this, practice by saying no to someone’s request for your time at least once a week. Going out with friends or ‘getting on the game’ are good things to practice saying no to once in a while.\n\n" +
-      "<b>Prioritize yourself.</b> Focusing on your health can be like pushing a reset button. Avoid excess fats and sugars that can creep into your diet when overwhelmed. Exercise for at least 20 minutes daily. Even push ups or burpees in the margins of time in between tasks can easily fill your quota. Stop working at a reasonable hour to ensure you get around 8 hours of sleep. Your tasks will always be there in the morning.n\n" +
+      "<b>Prioritize yourself.</b> Focusing on your health can be like pushing a reset button. Avoid excess fats and sugars that can creep into your diet when overwhelmed. Exercise for at least 20 minutes daily. Even push ups or burpees in the margins of time in between tasks can easily fill your quota. Stop working at a reasonable hour to ensure you get around 8 hours of sleep. Your tasks will always be there in the morning.\n\n" +
       "The ability to keep an equilibrium between intense work and health is one that can be developed just like any other. Being consistent with the habits above will not only help fend off burnout, but will also give you the opportunity to be a much more well rounded person outside of your work. If you are feeling burnt out, seek extra support and find even more ways to bounce back online.\n\n",
     impostor:
       "A majority of people will experience Impostor Syndrome at some point in their life, likely in their education or career. You might doubt your skills, experiences, and accomplishments because you feel like you aren’t good enough. You might not think you deserve to be in the position you’re in. You feel like a fraud.\n\n" +
-      "<i>‘Everyone else seems to understand… I must not be smart enough. They’re faster and stronger than me, there’s no way I can compete. I can never win scholarships when there are so many other accomplished students out there. I don’t deserve to be here, either it’s a mistake or I must have gotten lucky.’</i>\n\n" +
+      "<i>'Everyone else seems to understand… I must not be smart enough.' \n\n 'They’re faster and stronger than me, there’s no way I can compete.' \n\n 'I can never win scholarships when there are so many other accomplished students out there.' \n\n I don’t deserve to be here, either it’s a mistake or I must have gotten lucky.’</i>\n\n" +
       "<b>Wrong. Wrong. Wrong. Aaaaand you guessed it… wrong.</b>\n\n" +
-      "1. There is no single benchmark for intelligence, and everyone learns at their own pace. You likely excel in other fields or have unique experiences that you use to make original connections between subjects. The more you practice learning, the shorter it will take for new concepts to ‘click’.\n\n" +
-      "2. Work smarter not harder. What personal strengths can you take advantage of? Put yourself in the position to benefit the most from your strengths and suffer the least from your weaknesses. Someone being better than you in a single area doesn’t make them better than you as a person.\n\n" +
-      "3. You don’t decide if you win a scholarship, so why would you decide that you can’t win it? By investing in yourself and proving your accomplishments by making an impact on others, you have already fulfilled the requirements almost all scholarships are looking for! Not applying for a scholarship is equal to being the least desirable member of the application pool, so what have you got to lose?\n\n" +
-      "4.You shouldn’t doubt the positive feedback of others. If people thought you weren’t meant to be somewhere, someone would have already told you, and they’d probably still be wrong! If you’ve been accepted to a competitive program, qualified for a high-caliber sports team or done anything equally as incredible, don’t dismiss other people’s judgement! Someone made a good choice based on what they saw in you, so be proud of your accomplishments and keep pushing!\n\n" +
+      "<b>1.</b> There is no single benchmark for intelligence, and everyone learns at their own pace. You likely excel in other fields or have unique experiences that you use to make original connections between subjects. The more you practice learning, the shorter it will take for new concepts to ‘click’.\n\n" +
+      "<b>2.</b> Work smarter not harder. What personal strengths can you take advantage of? Put yourself in the position to benefit the most from your strengths and suffer the least from your weaknesses. Someone being better than you in a single area doesn’t make them better than you as a person.\n\n" +
+      "<b>3.</b> You don’t decide if you win a scholarship, so why would you decide that you can’t win it? By investing in yourself and proving your accomplishments by making an impact on others, you have already fulfilled the requirements almost all scholarships are looking for! Not applying for a scholarship is equal to being the least desirable member of the application pool, so what have you got to lose?\n\n" +
+      "<b>4.</b>You shouldn’t doubt the positive feedback of others. If people thought you weren’t meant to be somewhere, someone would have already told you, and they’d probably still be wrong! If you’ve been accepted to a competitive program, qualified for a high-caliber sports team or done anything equally as incredible, don’t dismiss other people’s judgement! Someone made a good choice based on what they saw in you, so be proud of your accomplishments and keep pushing!\n\n" +
       "At the time of writing, I recently put myself in a situation where my own feelings of inadequacy could have torn me to shreds. If you feel these types of thoughts beginning to invade your mind, you have to close the floodgates and look at your situation objectively. For me, that meant realizing that yes, some of the people around me might be more experienced, knowledgeable, and skilled.\n\n" +
       "But who said that was a bad thing?\n\n" +
       "Instead of letting me get the best of myself, I took it as a chance to learn from people who knew more than me and improved as a result. By noticing your own doubtful thoughts and removing them before they become a forest fire, you can instead use them to fuel your own growth!\n\n" +
@@ -362,7 +362,7 @@ export default {
       "Robert Iger shares his story from childhood to the end of his 15 years as the sixth CEO of The Walt Disney Company. Having over 200,000 employees look up to you is no small task, and the lessons learned throughout his journey reflect the scope of his responsibilities.\n\n" +
       "To summarize the book in one sentence: a leader’s business isn’t their product, it’s their people.\n\n",
     velvetRope:
-      "While fame and power might allow you to walk the Red Carpet, <b>money</b. gets you on the ‘right’ side of the Velvet Rope. Beyond VIP tours, premium plane tickets, and other next to harmless luxuries, the well-intended pursuit of profit is seeping into more sinister domains.\n\n" +
+      "While fame and power might allow you to walk the Red Carpet, <b>money</b>. gets you on the ‘right’ side of the Velvet Rope. Beyond VIP tours, premium plane tickets, and other next to harmless luxuries, the well-intended pursuit of profit is seeping into more sinister domains.\n\n" +
       "When money decides who gets healthcare and who dies, or what children get access to adequate education, in first world countries it is a question of morality more than economics whether the quest for high margins should corrode the foundation of our modern civilization.\n\n",
     thinkingFastSlow:
       "<i>Thinking Fast and Slow</i> asks the user to take a dive into their subconscious and realize that we don’t have as much free will as we might expect . This book explores the cognitive heuristics (mental shortcuts) and biases of the human mind and how they can affect our decisions without us giving it a second thought.\n\n" +

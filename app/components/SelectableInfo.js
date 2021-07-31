@@ -44,22 +44,16 @@ function Selectable(props) {
                 {props.text}
               </StyledText>
               {/* Link */}
-              {() => {
-                if (props.url) {
-                  return (
-                    <Text
-                      style={props.styles.link}
-                      onPress={() => {
-                        try {
-                          Linking.openURL(props.url);
-                        } catch {}
-                      }}
-                    >
-                      {props.linkName}
-                    </Text>
-                  );
-                }
-              }}
+              <Text
+                style={props.styles.link}
+                onPress={() => {
+                  try {
+                    Linking.openURL(props.url);
+                  } catch {}
+                }}
+              >
+                {props.linkName}
+              </Text>
             </ScrollView>
           </View>
           {/* Close Modal Button */}
