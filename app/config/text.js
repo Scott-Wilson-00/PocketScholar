@@ -50,7 +50,8 @@ export default {
       "<b>-></b> What was the end goal of this activity? Were there any lasting results?\n\n<b>-></b> What skills or lessons did I learn while participating in this activity?\n\n<b>-></b> What roles/responsibilities did I take on which challenged me? How did I grow from them?\n\n<b>-></b> What do my accomplishments and awards say about my character?\n\n" +
       "<b>Big Picture Questions:</b>\n" +
       "<b>-></b> Do I often pursue leadership roles? If not, why?\n\n<b>-></b> Am I committed to any activities or do I bounce from one to another without real investment?\n\n<b>-></b> Am I doing things that I am passionate about?\n\n<b>-></b> How much of my time is spent productively? (Learning, improving, providing value, helping others)\n\n" +
-      "From just a few simple questions, you can reveal a very large amount about who you are and your motivations. If you are unsatisfied with your answers, don’t run, hide, or worry! Once you make the simple decision to improve yourself and once you get the ball rolling, you’ll find how fulfilling it is to be pleased with your answers!\n\n",
+      "From just a few simple questions, you can reveal a very large amount about who you are and your motivations. If you are unsatisfied with your answers, don’t run, hide, or worry! Once you make the simple decision to improve yourself and once you get the ball rolling, you’ll find how fulfilling it is to be pleased with your answers!\n\n" +
+      "<b>Note:</b> PocketScholar is not connected to the internet. All information you input is safely stored locally on your device.\n\n",
     tracker:
       "Since inspiring you to win scholarships is the principal objective of PocketScholar, a scholarship tracker is pretty much a requirement! Using PocketScholar’s Resources page alongside your own research, it should be relatively easy to load the tracker full of scholarships relevant to your interests and circumstances. *None of the following examples are in any way related*\n\n" +
       "<b>Fields:</b>\n" +
@@ -78,7 +79,8 @@ export default {
       "<b>2)</b> In the case that you’re a parent, relative, teacher, coach, or friend, if you know someone who’s future you could impact by giving them access to PocketScholar, don’t do them a disservice! You have the possibility to positively influence someone’s future by accelerating their journey towards success. There’s no reason not to!\n\n" +
       "<b>3)</b> PocketScholar <b><i>is not</i></b> a book, and it is certainly not a one time read. As previously mentioned, your progress should keep you coming back. As you grow your Activities List, answer all the Prompts, and fill out the Scholarship Tracker, you should frequently reference the About, Get Started, and Challenges pages. Use the time to reflect on your progress, ensure you’re on the right track, and admire how far you’ve come!\n\n" +
       "<b>4)</b> PocketScholar is not a guide for applying to scholarships, but a guide on how to be an amazing candidate for them. Once you go above and beyond, applications will be a breeze! When it is time to finally start searching (grade 11 recommended) and applying (usually grade 12), you can find many scholarship search engines on the Resources page.\n\n" +
-      "<b>5)</b> Some of PocketScholar’s resources are targeted for Canadians. But if you’re not a Canuck, don’t let that dissuade you from the rest of the content! The principles you’ll learn can be applied anywhere on the globe.\n\n",
+      "<b>5)</b> Some of PocketScholar’s resources are targeted for Canadians. If you're not from Canada, don’t let that dissuade you from the rest of the content! The principles you’ll learn can be applied anywhere on the globe.\n\n" +
+      "<b>6)</b> Thank you to Freepik, photo3idea_studio, Pixelmeetup, and Catalin Fertu for creating images used in PocketScholar.\n\n",
   },
   getStartedText: {
     whatsAScholarship:
