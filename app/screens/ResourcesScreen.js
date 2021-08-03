@@ -42,7 +42,7 @@ function ResourcesScreen(props) {
         </ScrollView>
       </View>
       {/* Page Footer */}
-      <BottomBar message="Don't Stop Here!" />
+      <BottomBar message="Begin Lifelong Learning" />
     </ImageBackground>
   );
 }

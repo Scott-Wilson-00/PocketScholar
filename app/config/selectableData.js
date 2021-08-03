@@ -44,7 +44,7 @@ export default {
     },
     {
       title: "Investment Equation 3",
-      text: text.getStartedText.applyEquation3,
+      text: text.getStartedText.equation3,
     },
     {
       title: "Equation 3, The Ingredients",

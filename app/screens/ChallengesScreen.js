@@ -41,7 +41,7 @@ function ChallengesScreen(props) {
         </ScrollView>
       </View>
       {/* Page Footer */}
-      <BottomBar message="Work Smarter" />
+      <BottomBar message="Nothing Can Stop You" />
     </ImageBackground>
   );
 }
