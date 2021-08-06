@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "PocketScholar",
-    "slug": "PocketScholar",
+    "slug": "pocketscholar",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/images/appicon.png",
@@ -17,7 +17,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.swilson.pocketscholar",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {

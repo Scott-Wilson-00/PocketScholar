@@ -1,0 +1,16 @@
+{
+  "builds": {
+    "ios": {
+      "release": {
+        "buildType": "release"
+      },
+      "development": {
+        "buildType": "development-client",
+        "distribution": "internal"
+      },
+      "preview": {
+        "simulator": true
+      }
+    }
+  }
+}
