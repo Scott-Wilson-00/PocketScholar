@@ -24,6 +24,7 @@ export default {
     { title: "Prompts Page", text: text.aboutText.promptsPage },
     { title: "Resources Page", text: text.aboutText.resourcesPage },
     { title: "Developer Notes", text: text.aboutText.notes },
+    { title: "Copyright", text: text.aboutText.copyright },
   ],
   getStartedSelectable: [
     {
@@ -67,7 +68,7 @@ export default {
     { title: "Impostor Syndrome", text: text.challengesText.impostor },
     { title: "Dabbling", text: text.challengesText.dabbling },
     {
-      title: "Finding The Right Opportunities For You",
+      title: "Finding The Right Opportunities For Yourself",
       text: text.challengesText.opportunities,
     },
   ],
@@ -79,9 +80,9 @@ export default {
     "Describe your favorite lesson learned from a leadership experience? How did you learn it?",
     "What is your greatest strength? Give an example of a time it benefitted you.",
     "What is your greatest weakness? What do you do to regulate it?",
-    "Who has been an important role model for you?",
+    "Who has been an important role model for you? Why?",
     "On what occasion have you taken the initiative to fulfill a need at your school or in your community?",
-    "Tell the story of a mistake you’ve made. What were the consequences and what did you learn?",
+    "Tell the story of a mistake you have made. What were the consequences and what did you learn?",
     "Where do you see yourself in 10 years?",
   ],
   resourcesSelectable: [
