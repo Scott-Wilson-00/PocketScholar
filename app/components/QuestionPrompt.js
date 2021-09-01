@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import {
-  View,
-  ImageBackground,
-  Text,
-  Pressable,
-  Modal,
-  ScrollView,
-} from "react-native";
+import { View, ImageBackground, Text, Pressable, Modal } from "react-native";
 import globalStyles from "../config/globalStyles";
 import images from "../config/images";
+import InputScrollView from "react-native-input-scroll-view";
 import PromptAnswerField from "./PromptAnswerField";
 
 function QuestionPrompt(props) {
@@ -36,9 +30,9 @@ function QuestionPrompt(props) {
             {props.title}
           </Text>
           <View style={props.styles.modalTextContainer}>
-            <ScrollView contentContainerStyle={globalStyles.scrollView}>
+            <InputScrollView contentContainerStyle={globalStyles.scrollView}>
               <PromptAnswerField styles={props.styles} title={props.title} />
-            </ScrollView>
+            </InputScrollView>
           </View>
           {/* Close Modal Button */}
           <Pressable

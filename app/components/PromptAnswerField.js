@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import { TextInput } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -44,7 +44,7 @@ class PromptAnswerField extends Component {
       if (loadedResponse !== null) {
         this.setResponse(
           loadedResponse.length > 0
-            ? loadedResponse + "\n".repeat(20)
+            ? loadedResponse + "\n".repeat(15)
             : loadedResponse
         );
       } else {
